@@ -91,14 +91,14 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <section id="inicio" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="space-y-6 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#6b7d4f] leading-tight">
+        <div className="flex flex-col items-center space-y-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#6b7d4f] leading-tight text-center">
             Bienvenido a Corazón Verde
           </h2>
-          <p className="text-lg sm:text-xl text-[#6b6b6b] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-[#6b6b6b] max-w-2xl leading-relaxed text-center">
             <span className="text-[#d4a574] font-semibold italic">"Crianza natural, sabor real"</span>
           </p>
-          <p className="text-base sm:text-lg text-[#6b6b6b] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-[#6b6b6b] max-w-2xl leading-relaxed text-center">
             Producción artesanal de pollos de calidad premium con crianza en libertad, alimentación saludable y
             compromiso ambiental.
           </p>
@@ -106,7 +106,7 @@ export default function Home() {
       </section>
 
       {/* PILARES SECTION */}
-      <section id="pilares" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <section id="pilares" className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 py-16 sm:py-24">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 md:order-1">
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#6b7d4f] mb-8 text-center md:text-left">Nuestros Tres Pilares</h3>
@@ -144,7 +144,7 @@ export default function Home() {
             <img
               src="https://i.ibb.co/S4FLLLQb/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg"
               alt="Logo Corazón Verde"
-              className="max-w-[150px] sm:max-w-[180px] md:max-w-[200px] w-full h-auto object-contain opacity-80"
+              className="w-[84px] sm:w-[101px] md:w-[470px] h-auto object-contain opacity-80"
             />
           </div>
         </div>
@@ -152,20 +152,20 @@ export default function Home() {
 
       {/* RECETAS SECTION */}
       <section id="recetas" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="text-center mb-12 sm:mb-16">
-          <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#6b7d4f] mb-4">Recetas Deliciosas</h3>
-          <p className="text-base sm:text-lg text-[#6b6b6b] max-w-2xl mx-auto">
+        <div className="flex flex-col items-center mb-12 sm:mb-16">
+          <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#6b7d4f] mb-4 text-center">Recetas Deliciosas</h3>
+          <p className="text-base sm:text-lg text-[#6b6b6b] max-w-2xl text-center">
             Descubre cómo preparar nuestros pollos con estas deliciosas recetas recomendadas.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 place-items-center max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-5xl mx-auto">
           {/* Receta 1 */}
           <a
             href="https://www.paulinacocina.net/pollo-con-almendras/40089"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full"
+            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-sm"
           >
             <div className="relative aspect-video bg-[#e8dcc8] overflow-hidden">
               <div className="w-full h-full bg-gradient-to-br from-[#d4a574] to-[#a68266] flex items-center justify-center">
@@ -190,7 +190,7 @@ export default function Home() {
             href="https://www.paulinacocina.net/picante-de-pollo/42446"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full"
+            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-sm"
           >
             <div className="relative aspect-video bg-[#e8dcc8] overflow-hidden">
               <div className="w-full h-full bg-gradient-to-br from-[#d4a574] to-[#a68266] flex items-center justify-center">
@@ -215,7 +215,7 @@ export default function Home() {
             href="https://www.paulinacocina.net/pechugas-rellenas/40561"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full"
+            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-sm"
           >
             <div className="relative aspect-video bg-[#e8dcc8] overflow-hidden">
               <div className="w-full h-full bg-gradient-to-br from-[#d4a574] to-[#a68266] flex items-center justify-center">
@@ -239,49 +239,8 @@ export default function Home() {
 
       {/* FOOTER - CONTACTO */}
       <footer id="contacto" className="bg-[#6b7d4f] text-white py-12 sm:py-16 mt-16 sm:mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-10">
-            <div className="flex flex-col items-center text-center md:items-start md:text-left">
-              <img
-                src="https://i.ibb.co/S4FLLLQb/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg"
-                alt="Corazón Verde Logo"
-                className="h-12 w-12 sm:h-14 sm:w-14 object-contain mb-4"
-              />
-              <h4 className="font-bold text-lg mb-2">Corazón Verde</h4>
-              <p className="text-sm text-white/80 max-w-xs">Crianza natural, sabor real</p>
-            </div>
-            <div className="flex flex-col items-center text-center md:items-start md:text-left">
-              <h4 className="font-bold text-lg mb-4">Navegación</h4>
-              <ul className="space-y-3 text-sm">
-                <li>
-                  <a href="#inicio" className="hover:text-[#d4a574] transition-colors">
-                    Inicio
-                  </a>
-                </li>
-                <li>
-                  <a href="#pilares" className="hover:text-[#d4a574] transition-colors">
-                    Pilares
-                  </a>
-                </li>
-                <li>
-                  <a href="#recetas" className="hover:text-[#d4a574] transition-colors">
-                    Recetas
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col items-center text-center md:items-start md:text-left">
-              <h4 className="font-bold text-lg mb-4">Contacto</h4>
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-base hover:text-white transition-all bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
-              >
-                WhatsApp: {whatsappNumber}
-              </a>
-            </div>
-          </div>
+        <div className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8">
+         
           <div className="border-t border-white/20 pt-8 text-center space-y-2">
             <p className="text-sm text-white/80">© 2025 Corazón Verde. Todos los derechos reservados.</p>
             <p className="text-xs text-white/60">Producción artesanal de pollos con crianza natural y compromiso ambiental.</p>
