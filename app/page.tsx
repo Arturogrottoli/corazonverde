@@ -1,5 +1,5 @@
 "use client"
-import { MessageCircle, ChevronRight } from "lucide-react"
+import { MessageCircle, ChevronRight, Leaf, Sprout, Trees } from "lucide-react"
 
 interface GalleryImage {
   id: string
@@ -58,9 +58,9 @@ export default function Home() {
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#faf8f3] via-[#f5f1e8] to-[#faf8f3]">
+    <div className="min-h-screen bg-[#f0ebe0]">
       {/* NAVBAR */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-[#e8dcc8] shadow-sm">
+      <header className="sticky top-0 z-40 bg-[#f0ebe0]/95 backdrop-blur-sm border-b border-[#e8dcc8] shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <a href="#inicio" className="flex items-center gap-3 hover:opacity-80 transition">
@@ -69,20 +69,20 @@ export default function Home() {
                 alt="Corazón Verde Logo"
                 className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
               />
-              <h1 className="text-xl sm:text-2xl font-bold font-serif text-[#6b7d4f] hidden sm:block">Corazón Verde</h1>
+              <h1 className="text-xl sm:text-2xl font-bold font-serif text-[#2d7a3d] hidden sm:block">Corazón Verde</h1>
             </a>
           </div>
-          <nav className="hidden sm:flex gap-6 md:gap-8 text-[#6b7d4f] font-medium text-sm md:text-base">
-            <a href="#inicio" className="hover:text-[#d4a574] transition">
-              Inicio
-            </a>
-            <a href="#pilares" className="hover:text-[#d4a574] transition">
+          <nav className="hidden sm:flex gap-6 md:gap-8 text-[#2d7a3d] font-medium text-sm md:text-base">
+            <a href="#pilares" className="hover:text-[#4caf50] transition">
               Pilares
             </a>
-            <a href="#recetas" className="hover:text-[#d4a574] transition">
+            <a href="#galeria" className="hover:text-[#4caf50] transition">
+              Galería
+            </a>
+            <a href="#recetas" className="hover:text-[#4caf50] transition">
               Recetas
             </a>
-            <a href="#contacto" className="hover:text-[#d4a574] transition">
+            <a href="#contacto" className="hover:text-[#4caf50] transition">
               Contacto
             </a>
           </nav>
@@ -90,15 +90,25 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section id="inicio" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="flex flex-col items-center space-y-6">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#6b7d4f] leading-tight text-center">
-            Bienvenido a Corazón Verde
-          </h2>
-          <p className="text-lg sm:text-xl text-[#6b6b6b] max-w-2xl leading-relaxed text-center">
-            <span className="text-[#d4a574] font-semibold italic">"Crianza natural, sabor real"</span>
+      <section id="inicio" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
+        <div className="absolute top-10 left-10 opacity-20 text-[#4caf50] hidden lg:block">
+          <Leaf size={60} className="animate-pulse" />
+        </div>
+        <div className="absolute top-20 right-20 opacity-20 text-[#2d7a3d] hidden lg:block">
+          <Sprout size={50} className="animate-pulse delay-300" />
+        </div>
+        <div className="flex flex-col items-center space-y-6 relative z-10">
+          <div className="flex items-center gap-3 mb-2">
+            <Leaf className="text-[#4caf50] w-8 h-8 sm:w-10 sm:h-10" />
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#2d7a3d] leading-tight text-center">
+              Bienvenido a Corazón Verde
+            </h2>
+            <Leaf className="text-[#4caf50] w-8 h-8 sm:w-10 sm:h-10" />
+          </div>
+          <p className="text-lg sm:text-xl text-[#4a5568] max-w-2xl leading-relaxed text-center">
+            <span className="text-[#4caf50] font-semibold italic">"Crianza natural, sabor real"</span>
           </p>
-          <p className="text-base sm:text-lg text-[#6b6b6b] max-w-2xl leading-relaxed text-center">
+          <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl leading-relaxed text-center">
             Producción artesanal de pollos de calidad premium con crianza en libertad, alimentación saludable y
             compromiso ambiental.
           </p>
@@ -106,80 +116,118 @@ export default function Home() {
       </section>
 
       {/* PILARES SECTION */}
-      <section id="pilares" className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 py-16 sm:py-24">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#6b7d4f] mb-8 text-center md:text-left">Nuestros Tres Pilares</h3>
-            <div className="space-y-6">
+      <section id="pilares" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 my-8 sm:my-12 relative">
+        <div className="absolute bottom-10 left-5 opacity-15 text-[#4caf50] hidden md:block">
+          <Trees size={80} />
+        </div>
+        <div className="flex flex-col items-center mb-12 relative z-10">
+          <div className="flex items-center gap-2 mb-8">
+            <Sprout className="text-[#4caf50] w-6 h-6" />
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center">Nuestros Pilares</h3>
+            <Sprout className="text-[#4caf50] w-6 h-6" />
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="space-y-6 w-full">
               <div className="flex gap-4">
-                <div className="w-1 bg-[#d4a574] rounded-full flex-shrink-0"></div>
+                <div className="w-1 bg-[#4caf50] rounded-full flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-bold text-[#6b7d4f] mb-2">Bienestar Animal</h4>
-                  <p className="text-[#6b6b6b] text-sm sm:text-base">
+                  <h4 className="text-lg font-bold text-[#2d7a3d] mb-2">Bienestar Animal</h4>
+                  <p className="text-[#4a5568] text-sm sm:text-base">
                     Crianza en libertad con espacio, aire puro y cuidados naturales.
                   </p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="w-1 bg-[#d4a574] rounded-full flex-shrink-0"></div>
+                <div className="w-1 bg-[#4caf50] rounded-full flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-bold text-[#6b7d4f] mb-2">Alimentación Saludable</h4>
-                  <p className="text-[#6b6b6b] text-sm sm:text-base">
+                  <h4 className="text-lg font-bold text-[#2d7a3d] mb-2">Alimentación Saludable</h4>
+                  <p className="text-[#4a5568] text-sm sm:text-base">
                     Sin promotores de crecimiento ni antibióticos preventivos.
                   </p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="w-1 bg-[#d4a574] rounded-full flex-shrink-0"></div>
+                <div className="w-1 bg-[#4caf50] rounded-full flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-bold text-[#6b7d4f] mb-2">Compromiso Ambiental</h4>
-                  <p className="text-[#6b6b6b] text-sm sm:text-base">
+                  <h4 className="text-lg font-bold text-[#2d7a3d] mb-2">Compromiso Ambiental</h4>
+                  <p className="text-[#4a5568] text-sm sm:text-base">
                     Equilibrio entre producción, naturaleza y comunidad rural.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="order-1 md:order-2 flex justify-center">
+          <div className="flex justify-center md:justify-end">
             <img
               src="https://i.ibb.co/S4FLLLQb/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg"
               alt="Logo Corazón Verde"
-              className="w-[84px] sm:w-[101px] md:w-[470px] h-auto object-contain opacity-80"
+              className="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain opacity-80"
             />
           </div>
+        </div>
+      </section>
+
+      {/* GALERIA SECTION */}
+      <section id="galeria" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="flex flex-col items-center mb-12 sm:mb-16">
+          <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-4 text-center">Conocemos Nuestra Producción</h3>
+          <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
+            Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
+          </p>
+        </div>
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-7xl mx-auto">
+          {galleryImages.map((image) => (
+            <div
+              key={image.id}
+              className="group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] xl:w-[calc(20%-1rem)]"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <p className="text-white text-sm font-medium">{image.title}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* RECETAS SECTION */}
       <section id="recetas" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="flex flex-col items-center mb-12 sm:mb-16">
-          <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#6b7d4f] mb-4 text-center">Recetas Deliciosas</h3>
-          <p className="text-base sm:text-lg text-[#6b6b6b] max-w-2xl text-center">
+          <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-4 text-center">Recetas Deliciosas</h3>
+          <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
             Descubre cómo preparar nuestros pollos con estas deliciosas recetas recomendadas.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-7xl mx-auto">
           {/* Receta 1 */}
           <a
             href="https://www.paulinacocina.net/pollo-con-almendras/40089"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-sm"
+            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(33.333%-1.33rem)] lg:w-[320px]"
           >
-            <div className="relative aspect-video bg-[#e8dcc8] overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-[#d4a574] to-[#a68266] flex items-center justify-center">
+            <div className="relative aspect-video bg-[#c8e6c9] overflow-hidden">
+              <div className="w-full h-full bg-gradient-to-br from-[#4caf50] to-[#2d7a3d] flex items-center justify-center">
                 <span className="text-white font-serif text-lg sm:text-xl font-bold text-center px-4">
                   Pollo con Almendras
                 </span>
               </div>
             </div>
             <div className="p-4 sm:p-6">
-              <h4 className="text-lg sm:text-xl font-bold font-serif text-[#6b7d4f] mb-2">Pollo con Almendras</h4>
-              <p className="text-[#6b6b6b] text-sm mb-4">
+              <h4 className="text-lg sm:text-xl font-bold font-serif text-[#2d7a3d] mb-2">Pollo con Almendras</h4>
+              <p className="text-[#4a5568] text-sm mb-4">
                 Una receta elegante y sabrosa que realza el sabor natural de nuestro pollo.
               </p>
-              <div className="flex items-center gap-2 text-[#d4a574] font-semibold text-sm">
+              <div className="flex items-center gap-2 text-[#4caf50] font-semibold text-sm">
                 Ver Receta <ChevronRight size={16} />
               </div>
             </div>
@@ -190,10 +238,10 @@ export default function Home() {
             href="https://www.paulinacocina.net/picante-de-pollo/42446"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-sm"
+            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(33.333%-1.33rem)] lg:w-[320px]"
           >
-            <div className="relative aspect-video bg-[#e8dcc8] overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-[#d4a574] to-[#a68266] flex items-center justify-center">
+            <div className="relative aspect-video bg-[#c8e6c9] overflow-hidden">
+              <div className="w-full h-full bg-gradient-to-br from-[#4caf50] to-[#2d7a3d] flex items-center justify-center">
                 <span className="text-white font-serif text-lg sm:text-xl font-bold text-center px-4">
                   Picante de Pollo
                 </span>
@@ -201,7 +249,7 @@ export default function Home() {
             </div>
             <div className="p-4 sm:p-6">
               <h4 className="text-lg sm:text-xl font-bold font-serif text-[#6b7d4f] mb-2">Picante de Pollo</h4>
-              <p className="text-[#6b6b6b] text-sm mb-4">
+              <p className="text-[#4a5568] text-sm mb-4">
                 Un plato tradicional lleno de sabor y especias que harán agua la boca.
               </p>
               <div className="flex items-center gap-2 text-[#d4a574] font-semibold text-sm">
@@ -215,10 +263,10 @@ export default function Home() {
             href="https://www.paulinacocina.net/pechugas-rellenas/40561"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-sm"
+            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden w-full sm:w-[calc(33.333%-1.33rem)] lg:w-[320px]"
           >
-            <div className="relative aspect-video bg-[#e8dcc8] overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-[#d4a574] to-[#a68266] flex items-center justify-center">
+            <div className="relative aspect-video bg-[#c8e6c9] overflow-hidden">
+              <div className="w-full h-full bg-gradient-to-br from-[#4caf50] to-[#2d7a3d] flex items-center justify-center">
                 <span className="text-white font-serif text-lg sm:text-xl font-bold text-center px-4">
                   Pechugas Rellenas
                 </span>
@@ -226,7 +274,7 @@ export default function Home() {
             </div>
             <div className="p-4 sm:p-6">
               <h4 className="text-lg sm:text-xl font-bold font-serif text-[#6b7d4f] mb-2">Pechugas Rellenas</h4>
-              <p className="text-[#6b6b6b] text-sm mb-4">
+              <p className="text-[#4a5568] text-sm mb-4">
                 Pechugas jugosas rellenas de sorpresas. Perfectas para impresionar en la mesa.
               </p>
               <div className="flex items-center gap-2 text-[#d4a574] font-semibold text-sm">
@@ -238,7 +286,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER - CONTACTO */}
-      <footer id="contacto" className="bg-[#6b7d4f] text-white py-12 sm:py-16 mt-16 sm:mt-24">
+      <footer id="contacto" className="bg-gradient-to-b from-[#2d7a3d] to-[#1b5e20] text-white py-12 sm:py-16 mt-16 sm:mt-24">
         <div className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8">
          
           <div className="border-t border-white/20 pt-8 text-center space-y-2">
