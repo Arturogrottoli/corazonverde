@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { ChevronRight, Leaf, Sprout, Trees, Heart, Wheat, TreePine, Menu, X, Phone } from "lucide-react"
+import { ChevronRight, Leaf, Sprout, Trees, Heart, Wheat, TreePine, Menu, X } from "lucide-react"
 
 interface GalleryImage {
   id: string
@@ -106,9 +106,9 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#f0ebe0]">
+    <div className="min-h-screen bg-[#f8f6f1]">
       {/* NAVBAR */}
-      <header className="sticky top-0 z-40 bg-[#f0ebe0]/95 backdrop-blur-sm border-b border-[#e8dcc8] shadow-sm">
+      <header className="sticky top-0 z-40 bg-[#f8f6f1]/95 backdrop-blur-sm border-b border-[#e8dcc8] shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <a href="#inicio" className="flex items-center gap-3 hover:opacity-80 transition">
             <img
@@ -135,7 +135,7 @@ export default function Home() {
         </div>
         {/* Mobile menu */}
         {menuOpen && (
-          <nav className="sm:hidden border-t border-[#e8dcc8] bg-[#f0ebe0] px-4 pb-4">
+          <nav className="sm:hidden border-t border-[#e8dcc8] bg-[#f8f6f1] px-4 pb-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -173,15 +173,6 @@ export default function Home() {
             Producción artesanal de pollos de calidad premium con crianza en libertad, alimentación saludable y
             compromiso ambiental.
           </p>
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 bg-[#2d7a3d] hover:bg-[#236b31] text-white font-semibold px-8 py-3 rounded-full transition shadow-md hover:shadow-lg"
-          >
-            Hacé tu pedido
-            <ChevronRight size={18} />
-          </a>
         </div>
       </section>
 
@@ -201,30 +192,19 @@ export default function Home() {
               Los valores que guían nuestra producción día a día.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="grid gap-6">
-              {pilares.map((pilar) => (
-                <div
-                  key={pilar.title}
-                  className="bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition flex gap-5 items-start"
-                >
-                  <div className="bg-[#2d7a3d]/10 rounded-lg p-3 flex-shrink-0">
-                    <pilar.icon className="w-6 h-6 text-[#2d7a3d]" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-[#2d7a3d] mb-1">{pilar.title}</h4>
-                    <p className="text-[#4a5568] text-sm sm:text-base">{pilar.description}</p>
-                  </div>
+          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {pilares.map((pilar) => (
+              <div
+                key={pilar.title}
+                className="bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition text-center"
+              >
+                <div className="bg-[#2d7a3d]/10 rounded-lg p-3 inline-flex mb-4">
+                  <pilar.icon className="w-6 h-6 text-[#2d7a3d]" />
                 </div>
-              ))}
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://i.ibb.co/S4FLLLQb/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg"
-                alt="Logo Corazón Verde"
-                className="w-[200px] sm:w-[250px] md:w-[280px] h-auto object-contain opacity-80"
-              />
-            </div>
+                <h4 className="text-lg font-bold text-[#2d7a3d] mb-2">{pilar.title}</h4>
+                <p className="text-[#4a5568] text-sm sm:text-base">{pilar.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -268,14 +248,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
             {recipes.map((recipe) => (
               <a
                 key={recipe.title}
                 href={recipe.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:-translate-y-1"
+                className="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:-translate-y-1 w-full sm:w-[300px]"
               >
                 <div className="relative aspect-video overflow-hidden">
                   <img
@@ -298,38 +278,11 @@ export default function Home() {
       </section>
 
       {/* FOOTER - CONTACTO */}
-      <footer id="contacto" className="bg-gradient-to-b from-[#2d7a3d] to-[#1b5e20] text-white py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-            <div>
-              <h4 className="font-serif font-bold text-lg mb-3">Corazón Verde</h4>
-              <p className="text-white/70 text-sm leading-relaxed">
-                Producción artesanal de pollos con crianza natural y compromiso ambiental.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-serif font-bold text-lg mb-3">Contacto</h4>
-              <div className="space-y-2 text-sm text-white/70">
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition">
-                  <Phone size={14} />
-                  {whatsappNumber}
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-serif font-bold text-lg mb-3">Navegación</h4>
-              <div className="grid grid-cols-2 gap-2 text-sm text-white/70">
-                {navLinks.map((link) => (
-                  <a key={link.href} href={link.href} className="hover:text-white transition">
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-white/20 pt-6 text-center">
-            <p className="text-sm text-white/60">&copy; {new Date().getFullYear()} Corazón Verde. Todos los derechos reservados.</p>
-          </div>
+      <footer id="contacto" className="bg-[#2d7a3d] text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+          <p className="font-serif font-bold text-lg">Corazón Verde</p>
+          <p className="text-sm text-white/70">Crianza natural, sabor real.</p>
+          <p className="text-xs text-white/50 pt-2">&copy; {new Date().getFullYear()} Corazón Verde. Todos los derechos reservados.</p>
         </div>
       </footer>
 
