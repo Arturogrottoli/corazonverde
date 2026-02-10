@@ -204,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* PILARES SECTION */}
-      <section id="pilares" className="py-24 sm:py-32 relative">
+      <section id="pilares" className="py-20 sm:py-28 mt-12 sm:mt-20 relative">
         <div className="absolute bottom-10 left-5 opacity-10 text-[#4caf50] hidden md:block">
           <Trees size={80} />
         </div>
@@ -239,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* GALERIA SECTION */}
-      <section id="galeria" className="bg-[#e8dcc8]/30 py-24 sm:py-32">
+      <section id="galeria" className="bg-[#e8dcc8]/30 py-20 sm:py-28 mt-12 sm:mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center mb-14 sm:mb-20">
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-4 text-center">Nuestra Producción</h3>
@@ -278,7 +278,7 @@ export default function Home() {
       </section>
 
       {/* RECETAS SECTION */}
-      <section id="recetas" className="py-24 sm:py-32">
+      <section id="recetas" className="py-20 sm:py-28 mt-12 sm:mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center mb-14 sm:mb-20">
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-4 text-center">Recetas Deliciosas</h3>
@@ -317,7 +317,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER - CONTACTO */}
-      <footer id="contacto" className="bg-[#2d7a3d] text-white py-12 mt-8">
+      <footer id="contacto" className="bg-[#2d7a3d] text-white py-12 mt-12 sm:mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
           <p className="font-serif font-bold text-lg">Corazón Verde</p>
           <p className="text-sm text-white/70">Crianza natural, sabor real.</p>
