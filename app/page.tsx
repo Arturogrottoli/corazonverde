@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
-import { ChevronRight, Leaf, Sprout, Trees, Heart, Wheat, TreePine, Menu, X } from "lucide-react"
+import { ChevronRight, Leaf, Sprout, Trees, Heart, Wheat, TreePine, Menu, X, Send } from "lucide-react"
 
 interface GalleryImage {
   id: string
@@ -10,12 +10,6 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  {
-    id: "1",
-    title: "Niña de Campo con Gallinas",
-    src: "https://i.ibb.co/qL6ZVwG/IMG-20220520-160726209.jpg",
-    alt: "Niña de campo trabajando con gallinas",
-  },
   {
     id: "2",
     title: "Gallinas en la Granja",
@@ -175,28 +169,32 @@ export default function Home() {
           />
         ))}
         <div className="absolute inset-0 bg-[#1b5e20]/40" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-6 text-center">
-          <img
-            src="https://i.ibb.co/S4FLLLQb/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg"
-            alt="Corazón Verde Logo"
-            className="object-contain rounded-full shadow-lg"
-            style={{ width: 100, height: 100, marginBottom: 24 }}
-          />
-          <div className="flex items-center gap-3" style={{ marginBottom: 16 }}>
-            <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif text-white leading-tight">
-              Corazón Verde
-            </h2>
-            <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-between px-4 sm:px-6 text-center" style={{ paddingTop: 40, paddingBottom: 30 }}>
+          {/* Bloque central */}
+          <div className="flex-1 flex flex-col items-center justify-center">
+            <img
+              src="https://i.ibb.co/S4FLLLQb/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg"
+              alt="Corazón Verde Logo"
+              className="object-contain rounded-full shadow-lg"
+              style={{ width: 250, height: 250, marginBottom: 16 }}
+            />
+            <div className="flex items-center gap-3" style={{ marginBottom: 12 }}>
+              <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif text-white leading-tight">
+                Corazón Verde
+              </h2>
+              <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+            </div>
+            <p className="text-xl sm:text-2xl text-white/90 font-semibold italic" style={{ marginBottom: 12 }}>
+              &ldquo;Crianza natural, sabor real&rdquo;
+            </p>
+            <p className="text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
+              Producción artesanal de pollos de calidad premium con crianza en libertad, alimentación saludable y
+              compromiso ambiental.
+            </p>
           </div>
-          <p className="text-xl sm:text-2xl text-white/90 font-semibold italic mb-4">
-            &ldquo;Crianza natural, sabor real&rdquo;
-          </p>
-          <p className="text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
-            Producción artesanal de pollos de calidad premium con crianza en libertad, alimentación saludable y
-            compromiso ambiental.
-          </p>
-          <div className="flex gap-2 mt-8">
+          {/* Dots del carousel */}
+          <div className="flex gap-2">
             {heroImages.map((_, i) => (
               <button
                 key={i}
@@ -210,13 +208,13 @@ export default function Home() {
       </section>
 
       {/* PILARES SECTION */}
-      <section id="pilares" className="relative" style={{ paddingTop: 100, paddingBottom: 100 }}>
+      <section id="pilares" className="relative" style={{ paddingTop: 50, paddingBottom: 50 }}>
         <div className="absolute bottom-10 left-5 opacity-10 text-[#4caf50] hidden md:block">
           <Trees size={80} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center" style={{ marginBottom: 80 }}>
-            <div className="flex items-center gap-2" style={{ marginBottom: 20 }}>
+          <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
+            <div className="flex items-center gap-2" style={{ marginBottom: 10 }}>
               <Sprout className="text-[#4caf50] w-6 h-6" />
               <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center">Nuestros Pilares</h3>
               <Sprout className="text-[#4caf50] w-6 h-6" />
@@ -245,34 +243,17 @@ export default function Home() {
       </section>
 
       {/* GALERIA SECTION */}
-      <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 100, paddingBottom: 100 }}>
+      <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 50, paddingBottom: 50 }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center" style={{ marginBottom: 80 }}>
-            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 20 }}>Nuestra Producción</h3>
-            <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
+          <div style={{ marginBottom: 40, display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d]" style={{ marginBottom: 10, textAlign: "center", width: "100%" }}>Nuestra Producción</h3>
+            <p className="text-base sm:text-lg text-[#4a5568]" style={{ maxWidth: 640, textAlign: "center" }}>
               Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-2 gap-3 sm:gap-4 auto-rows-[200px] sm:auto-rows-[240px]">
-            {/* Imagen grande - 2 cols, 2 rows */}
-            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 col-span-2 row-span-2">
-              <img src={galleryImages[0].src} alt={galleryImages[0].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{galleryImages[0].title}</p>
-              </div>
-            </div>
-            {/* 2 imágenes a la derecha de la grande */}
-            {galleryImages.slice(1, 3).map((image) => (
-              <div key={image.id} className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
-                <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{image.title}</p>
-                </div>
-              </div>
-            ))}
-            {/* Fila inferior: 4 imágenes iguales */}
-            {galleryImages.slice(3).map((image) => (
-              <div key={image.id} className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5">
+            {galleryImages.map((image) => (
+              <div key={image.id} className="group relative aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{image.title}</p>
@@ -284,10 +265,10 @@ export default function Home() {
       </section>
 
       {/* RECETAS SECTION */}
-      <section id="recetas" style={{ paddingTop: 100, paddingBottom: 100 }}>
+      <section id="recetas" style={{ paddingTop: 50, paddingBottom: 50 }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center" style={{ marginBottom: 80 }}>
-            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 20 }}>Recetas Deliciosas</h3>
+          <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Recetas Deliciosas</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
               Descubrí cómo preparar nuestros pollos con estas deliciosas recetas recomendadas.
             </p>
@@ -322,12 +303,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER - CONTACTO */}
-      <footer id="contacto" className="bg-[#2d7a3d] text-white" style={{ paddingTop: 60, paddingBottom: 60, marginTop: 80 }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <p className="font-serif font-bold text-lg">Corazón Verde</p>
-          <p className="text-sm text-white/70">Crianza natural, sabor real.</p>
-          <p className="text-xs text-white/50 pt-2">&copy; {new Date().getFullYear()} Corazón Verde. Todos los derechos reservados.</p>
+      {/* CONTACTO SECTION */}
+      <section id="contacto" className="bg-[#2d7a3d]" style={{ paddingTop: 60, paddingBottom: 60, marginTop: 40 }}>
+        <div style={{ maxWidth: 520, margin: "0 auto", padding: "0 16px" }}>
+          <div style={{ marginBottom: 40, display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-white" style={{ marginBottom: 10, textAlign: "center", width: "100%" }}>Contactanos</h3>
+            <p className="text-white/70 text-sm sm:text-base" style={{ textAlign: "center" }}>
+              Dejanos tu mensaje y te responderemos a la brevedad a tu correo.
+            </p>
+          </div>
+          <form
+            action="https://formsubmit.co/tucorreo@ejemplo.com"
+            method="POST"
+            className="space-y-5"
+          >
+            {/* FormSubmit config */}
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Corazón Verde" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <div>
+              <label htmlFor="name" className="block text-white/80 text-sm font-medium" style={{ marginBottom: 6 }}>Nombre</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Tu nombre"
+                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-white/80 text-sm font-medium" style={{ marginBottom: 6 }}>Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="tu@correo.com"
+                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-white/80 text-sm font-medium" style={{ marginBottom: 6 }}>Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                placeholder="¿En qué podemos ayudarte?"
+                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition resize-none"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full flex items-center justify-center gap-2 bg-white text-[#2d7a3d] font-semibold rounded-lg px-6 py-3 text-sm hover:bg-white/90 transition"
+            >
+              Enviar mensaje
+              <Send className="w-4 h-4" />
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-[#1b5e20] text-white" style={{ paddingTop: 24, paddingBottom: 24 }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} Corazón Verde. Todos los derechos reservados.</p>
         </div>
       </footer>
 
