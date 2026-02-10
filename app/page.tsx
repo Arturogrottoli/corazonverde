@@ -176,7 +176,13 @@ export default function Home() {
         ))}
         <div className="absolute inset-0 bg-[#1b5e20]/40" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-6 text-center">
-          <div className="flex items-center gap-3 mb-4">
+          <img
+            src="https://i.ibb.co/S4FLLLQb/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg"
+            alt="Corazón Verde Logo"
+            className="object-contain rounded-full shadow-lg"
+            style={{ width: 100, height: 100, marginBottom: 24 }}
+          />
+          <div className="flex items-center gap-3" style={{ marginBottom: 16 }}>
             <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
             <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif text-white leading-tight">
               Corazón Verde
@@ -204,13 +210,13 @@ export default function Home() {
       </section>
 
       {/* PILARES SECTION */}
-      <section id="pilares" className="py-28 sm:py-36 mt-12 sm:mt-20 relative">
+      <section id="pilares" className="relative" style={{ paddingTop: 100, paddingBottom: 100 }}>
         <div className="absolute bottom-10 left-5 opacity-10 text-[#4caf50] hidden md:block">
           <Trees size={80} />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 relative z-10">
-          <div className="flex flex-col items-center mb-20 sm:mb-28">
-            <div className="flex items-center gap-2 mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col items-center" style={{ marginBottom: 80 }}>
+            <div className="flex items-center gap-2" style={{ marginBottom: 20 }}>
               <Sprout className="text-[#4caf50] w-6 h-6" />
               <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center">Nuestros Pilares</h3>
               <Sprout className="text-[#4caf50] w-6 h-6" />
@@ -239,10 +245,10 @@ export default function Home() {
       </section>
 
       {/* GALERIA SECTION */}
-      <section id="galeria" className="bg-[#e8dcc8]/30 py-28 sm:py-36 mt-12 sm:mt-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
-          <div className="flex flex-col items-center mb-20 sm:mb-28">
-            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-6 text-center">Nuestra Producción</h3>
+      <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 100, paddingBottom: 100 }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center" style={{ marginBottom: 80 }}>
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 20 }}>Nuestra Producción</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
               Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
             </p>
@@ -278,10 +284,10 @@ export default function Home() {
       </section>
 
       {/* RECETAS SECTION */}
-      <section id="recetas" className="py-28 sm:py-36 mt-12 sm:mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
-          <div className="flex flex-col items-center mb-20 sm:mb-28">
-            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-6 text-center">Recetas Deliciosas</h3>
+      <section id="recetas" style={{ paddingTop: 100, paddingBottom: 100 }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center" style={{ marginBottom: 80 }}>
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 20 }}>Recetas Deliciosas</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
               Descubrí cómo preparar nuestros pollos con estas deliciosas recetas recomendadas.
             </p>
@@ -317,7 +323,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER - CONTACTO */}
-      <footer id="contacto" className="bg-[#2d7a3d] text-white py-16 mt-16 sm:mt-24">
+      <footer id="contacto" className="bg-[#2d7a3d] text-white" style={{ paddingTop: 60, paddingBottom: 60, marginTop: 80 }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
           <p className="font-serif font-bold text-lg">Corazón Verde</p>
           <p className="text-sm text-white/70">Crianza natural, sabor real.</p>
