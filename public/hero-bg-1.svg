@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f5e9"/>
+      <stop offset="60%" stop-color="#c8e6c9"/>
+      <stop offset="100%" stop-color="#a5d6a7"/>
+    </linearGradient>
+    <linearGradient id="hill1a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="hill1b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#388e3c"/>
+      <stop offset="100%" stop-color="#1b5e20"/>
+    </linearGradient>
+    <linearGradient id="hill1c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d7a3d"/>
+      <stop offset="100%" stop-color="#145a24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky1)"/>
+  <!-- Sun glow -->
+  <circle cx="1500" cy="250" r="300" fill="#fff9c4" opacity="0.3"/>
+  <circle cx="1500" cy="250" r="150" fill="#fff59d" opacity="0.4"/>
+  <!-- Far hills -->
+  <path d="M0 600 Q200 420 500 520 Q800 400 1100 480 Q1400 380 1700 450 Q1820 480 1920 500 L1920 1080 L0 1080Z" fill="url(#hill1a)" opacity="0.5"/>
+  <!-- Mid hills -->
+  <path d="M0 700 Q300 550 600 650 Q900 520 1200 620 Q1500 530 1920 640 L1920 1080 L0 1080Z" fill="url(#hill1b)" opacity="0.7"/>
+  <!-- Trees on mid hill -->
+  <g fill="#2e7d32" opacity="0.6">
+    <ellipse cx="200" cy="660" rx="30" ry="50"/>
+    <ellipse cx="260" cy="650" rx="25" ry="45"/>
+    <ellipse cx="500" cy="630" rx="35" ry="55"/>
+    <ellipse cx="800" cy="590" rx="28" ry="48"/>
+    <ellipse cx="850" cy="600" rx="32" ry="52"/>
+    <ellipse cx="1100" cy="610" rx="30" ry="50"/>
+    <ellipse cx="1400" cy="570" rx="25" ry="45"/>
+    <ellipse cx="1450" cy="580" rx="30" ry="50"/>
+    <ellipse cx="1700" cy="620" rx="28" ry="48"/>
+  </g>
+  <!-- Front hills -->
+  <path d="M0 800 Q250 700 500 760 Q750 680 1000 740 Q1250 690 1500 730 Q1750 700 1920 750 L1920 1080 L0 1080Z" fill="url(#hill1c)" opacity="0.85"/>
+  <!-- Front trees -->
+  <g fill="#1b5e20" opacity="0.7">
+    <ellipse cx="100" cy="770" rx="40" ry="65"/>
+    <ellipse cx="170" cy="760" rx="35" ry="60"/>
+    <ellipse cx="400" cy="750" rx="38" ry="62"/>
+    <ellipse cx="650" cy="720" rx="42" ry="68"/>
+    <ellipse cx="720" cy="730" rx="36" ry="58"/>
+    <ellipse cx="950" cy="730" rx="40" ry="65"/>
+    <ellipse cx="1200" cy="720" rx="35" ry="58"/>
+    <ellipse cx="1250" cy="710" rx="30" ry="55"/>
+    <ellipse cx="1550" cy="720" rx="38" ry="62"/>
+    <ellipse cx="1800" cy="730" rx="42" ry="65"/>
+  </g>
+  <!-- Grass -->
+  <path d="M0 850 Q480 820 960 840 Q1440 820 1920 850 L1920 1080 L0 1080Z" fill="#145a24"/>
+  <!-- Subtle leaf decorations -->
+  <g fill="#4caf50" opacity="0.15">
+    <path d="M300 200 Q320 150 350 200 Q320 180 300 200Z" transform="scale(3) translate(-60,-30)"/>
+    <path d="M600 300 Q620 250 650 300 Q620 280 600 300Z" transform="scale(2.5) translate(-180,-80)"/>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcedc8"/>
+      <stop offset="50%" stop-color="#c5e1a5"/>
+      <stop offset="100%" stop-color="#aed581"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="0.3" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#f1f8e9" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c5e1a5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky2)"/>
+  <rect width="1920" height="1080" fill="url(#glow2)"/>
+  <!-- Meadow layers -->
+  <path d="M0 500 Q300 450 600 480 Q960 420 1300 460 Q1600 430 1920 470 L1920 1080 L0 1080Z" fill="#81c784" opacity="0.4"/>
+  <path d="M0 580 Q400 530 800 560 Q1200 510 1600 550 Q1800 540 1920 560 L1920 1080 L0 1080Z" fill="#66bb6a" opacity="0.5"/>
+  <!-- Wildflower meadow dots -->
+  <g opacity="0.3">
+    <circle cx="150" cy="620" r="4" fill="#fff176"/>
+    <circle cx="300" cy="590" r="3" fill="#fff9c4"/>
+    <circle cx="450" cy="610" r="5" fill="#fff176"/>
+    <circle cx="700" cy="580" r="4" fill="#ffe082"/>
+    <circle cx="900" cy="570" r="3" fill="#fff9c4"/>
+    <circle cx="1100" cy="560" r="5" fill="#fff176"/>
+    <circle cx="1300" cy="575" r="4" fill="#ffe082"/>
+    <circle cx="1500" cy="555" r="3" fill="#fff9c4"/>
+    <circle cx="1700" cy="565" r="5" fill="#fff176"/>
+  </g>
+  <!-- Rolling field -->
+  <path d="M0 650 Q320 600 640 630 Q960 580 1280 620 Q1600 590 1920 630 L1920 1080 L0 1080Z" fill="#4caf50" opacity="0.6"/>
+  <path d="M0 750 Q400 710 800 730 Q1200 700 1600 720 Q1800 715 1920 730 L1920 1080 L0 1080Z" fill="#388e3c" opacity="0.7"/>
+  <!-- Fence posts -->
+  <g stroke="#5d4037" stroke-width="3" opacity="0.25">
+    <line x1="200" y1="700" x2="200" y2="740"/>
+    <line x1="350" y1="690" x2="350" y2="730"/>
+    <line x1="500" y1="695" x2="500" y2="735"/>
+    <line x1="650" y1="688" x2="650" y2="728"/>
+    <line x1="800" y1="692" x2="800" y2="732"/>
+    <line x1="200" y1="715" x2="800" y2="705"/>
+  </g>
+  <!-- Ground -->
+  <path d="M0 830 Q480 810 960 820 Q1440 800 1920 830 L1920 1080 L0 1080Z" fill="#2e7d32"/>
+  <!-- Scattered leaves -->
+  <g fill="#43a047" opacity="0.2">
+    <path d="M1600 150 C1620 120 1650 120 1640 160 C1620 150 1600 150 1600 150Z"/>
+    <path d="M400 250 C420 220 450 220 440 260 C420 250 400 250 400 250Z" transform="rotate(30 420 240)"/>
+    <path d="M1200 180 C1220 150 1250 150 1240 190 C1220 180 1200 180 1200 180Z" transform="rotate(-20 1220 170)"/>
+  </g>
+</svg>

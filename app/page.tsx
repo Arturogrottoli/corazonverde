@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ChevronRight, Leaf, Sprout, Trees, Heart, Wheat, TreePine, Menu, X } from "lucide-react"
 
 interface GalleryImage {
@@ -93,10 +93,24 @@ const pilares = [
   },
 ]
 
+const heroImages = [
+  "/hero-bg-1.svg",
+  "/hero-bg-2.svg",
+  "/hero-bg-3.svg",
+]
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [heroIndex, setHeroIndex] = useState(0)
   const whatsappNumber = "2396618566"
   const whatsappLink = `https://wa.me/${whatsappNumber}`
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % heroImages.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   const navLinks = [
     { href: "#pilares", label: "Pilares" },
@@ -151,38 +165,51 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section id="inicio" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
-        <div className="absolute top-10 left-10 opacity-20 text-[#4caf50] hidden lg:block">
-          <Leaf size={60} className="animate-pulse" />
-        </div>
-        <div className="absolute top-20 right-20 opacity-20 text-[#2d7a3d] hidden lg:block">
-          <Sprout size={50} className="animate-pulse delay-300" />
-        </div>
-        <div className="flex flex-col items-center space-y-6 relative z-10">
-          <div className="flex items-center gap-3 mb-2">
-            <Leaf className="text-[#4caf50] w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#2d7a3d] leading-tight text-center">
-              Bienvenido a Corazón Verde
+      <section id="inicio" className="relative h-[70vh] sm:h-[80vh] overflow-hidden">
+        {heroImages.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === heroIndex ? "opacity-100" : "opacity-0"}`}
+          />
+        ))}
+        <div className="absolute inset-0 bg-[#1b5e20]/40" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-6 text-center">
+          <div className="flex items-center gap-3 mb-4">
+            <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif text-white leading-tight">
+              Corazón Verde
             </h2>
-            <Leaf className="text-[#4caf50] w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+            <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
           </div>
-          <p className="text-lg sm:text-xl text-[#4a5568] max-w-2xl leading-relaxed text-center">
-            <span className="text-[#4caf50] font-semibold italic">&ldquo;Crianza natural, sabor real&rdquo;</span>
+          <p className="text-xl sm:text-2xl text-white/90 font-semibold italic mb-4">
+            &ldquo;Crianza natural, sabor real&rdquo;
           </p>
-          <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl leading-relaxed text-center">
+          <p className="text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
             Producción artesanal de pollos de calidad premium con crianza en libertad, alimentación saludable y
             compromiso ambiental.
           </p>
+          <div className="flex gap-2 mt-8">
+            {heroImages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setHeroIndex(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-all ${i === heroIndex ? "bg-white scale-110" : "bg-white/40"}`}
+                aria-label={`Imagen ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* PILARES SECTION */}
-      <section id="pilares" className="bg-[#e8dcc8]/40 py-16 sm:py-24 relative">
+      <section id="pilares" className="py-24 sm:py-32 relative">
         <div className="absolute bottom-10 left-5 opacity-10 text-[#4caf50] hidden md:block">
           <Trees size={80} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center mb-12">
+          <div className="flex flex-col items-center mb-16 sm:mb-20">
             <div className="flex items-center gap-2 mb-4">
               <Sprout className="text-[#4caf50] w-6 h-6" />
               <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center">Nuestros Pilares</h3>
@@ -192,14 +219,16 @@ export default function Home() {
               Los valores que guían nuestra producción día a día.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {pilares.map((pilar) => (
+          <div className="flex flex-col sm:flex-row sm:justify-between gap-8">
+            {pilares.map((pilar, i) => (
               <div
                 key={pilar.title}
-                className="bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition text-center"
+                className={`bg-white/70 backdrop-blur-sm rounded-xl p-8 shadow-sm hover:shadow-md transition text-center w-full sm:w-[280px] ${
+                  i === 0 ? "sm:self-start" : i === 1 ? "sm:self-center" : "sm:self-end"
+                }`}
               >
-                <div className="bg-[#2d7a3d]/10 rounded-lg p-3 inline-flex mb-4">
-                  <pilar.icon className="w-6 h-6 text-[#2d7a3d]" />
+                <div className="bg-[#2d7a3d]/10 rounded-full p-4 inline-flex mb-5">
+                  <pilar.icon className="w-7 h-7 text-[#2d7a3d]" />
                 </div>
                 <h4 className="text-lg font-bold text-[#2d7a3d] mb-2">{pilar.title}</h4>
                 <p className="text-[#4a5568] text-sm sm:text-base">{pilar.description}</p>
@@ -210,52 +239,62 @@ export default function Home() {
       </section>
 
       {/* GALERIA SECTION */}
-      <section id="galeria" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="flex flex-col items-center mb-12 sm:mb-16">
-          <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-4 text-center">Nuestra Producción</h3>
-          <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
-            Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-5">
-          {galleryImages.map((image) => (
-            <div
-              key={image.id}
-              className="group relative aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+      <section id="galeria" className="bg-[#e8dcc8]/30 py-24 sm:py-32">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center mb-14 sm:mb-20">
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-4 text-center">Nuestra Producción</h3>
+            <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
+              Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-2 gap-3 sm:gap-4 auto-rows-[200px] sm:auto-rows-[240px]">
+            {/* Imagen grande - 2 cols, 2 rows */}
+            <div className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 col-span-2 row-span-2">
+              <img src={galleryImages[0].src} alt={galleryImages[0].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <p className="text-white text-sm font-medium">{image.title}</p>
-                </div>
+                <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{galleryImages[0].title}</p>
               </div>
             </div>
-          ))}
+            {/* 2 imágenes a la derecha de la grande */}
+            {galleryImages.slice(1, 3).map((image) => (
+              <div key={image.id} className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{image.title}</p>
+                </div>
+              </div>
+            ))}
+            {/* Fila inferior: 4 imágenes iguales */}
+            {galleryImages.slice(3).map((image) => (
+              <div key={image.id} className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{image.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* RECETAS SECTION */}
-      <section id="recetas" className="bg-[#e8dcc8]/40 py-16 sm:py-24">
+      <section id="recetas" className="py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center mb-12 sm:mb-16">
+          <div className="flex flex-col items-center mb-14 sm:mb-20">
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] mb-4 text-center">Recetas Deliciosas</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
               Descubrí cómo preparar nuestros pollos con estas deliciosas recetas recomendadas.
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14">
             {recipes.map((recipe) => (
               <a
                 key={recipe.title}
                 href={recipe.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:-translate-y-1 w-full sm:w-[300px]"
+                className="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:-translate-y-1"
               >
                 <div className="relative aspect-video overflow-hidden">
                   <img
@@ -278,8 +317,8 @@ export default function Home() {
       </section>
 
       {/* FOOTER - CONTACTO */}
-      <footer id="contacto" className="bg-[#2d7a3d] text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+      <footer id="contacto" className="bg-[#2d7a3d] text-white py-12 mt-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
           <p className="font-serif font-bold text-lg">Corazón Verde</p>
           <p className="text-sm text-white/70">Crianza natural, sabor real.</p>
           <p className="text-xs text-white/50 pt-2">&copy; {new Date().getFullYear()} Corazón Verde. Todos los derechos reservados.</p>
