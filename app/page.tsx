@@ -159,7 +159,7 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section id="inicio" className="relative h-[70vh] sm:h-[80vh] overflow-hidden">
+      <section id="inicio" className="relative h-dvh sm:h-[85vh] overflow-hidden">
         {heroImages.map((src, i) => (
           <img
             key={src}
@@ -169,37 +169,37 @@ export default function Home() {
           />
         ))}
         <div className="absolute inset-0 bg-[#1b5e20]/40" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-between px-4 sm:px-6 text-center" style={{ paddingTop: 40, paddingBottom: 30 }}>
+        <div className="relative z-10 h-full flex flex-col items-center justify-between px-4 sm:px-6 text-center" style={{ paddingTop: 40, paddingBottom: 40 }}>
           {/* Bloque central */}
           <div className="flex-1 flex flex-col items-center justify-center">
             <img
               src="https://i.ibb.co/S4FLLLQb/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg"
               alt="Corazón Verde Logo"
-              className="object-contain rounded-full shadow-lg"
-              style={{ width: 250, height: 250, marginBottom: 16 }}
+              className="object-contain rounded-full shadow-lg w-[180px] h-[180px] sm:w-[250px] sm:h-[250px]"
+              style={{ marginBottom: 16 }}
             />
             <div className="flex items-center gap-3" style={{ marginBottom: 12 }}>
-              <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
-              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-serif text-white leading-tight">
+              <Leaf className="text-white/80 w-7 h-7 sm:w-10 sm:h-10 flex-shrink-0" />
+              <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold font-serif text-white leading-tight">
                 Corazón Verde
               </h2>
-              <Leaf className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+              <Leaf className="text-white/80 w-7 h-7 sm:w-10 sm:h-10 flex-shrink-0" />
             </div>
-            <p className="text-xl sm:text-2xl text-white/90 font-semibold italic" style={{ marginBottom: 12 }}>
+            <p className="text-lg sm:text-2xl text-white/90 font-semibold italic" style={{ marginBottom: 12 }}>
               &ldquo;Crianza natural, sabor real&rdquo;
             </p>
-            <p className="text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
+            <p className="text-sm sm:text-lg text-white/75 max-w-2xl leading-relaxed px-2">
               Producción artesanal de pollos de calidad premium con crianza en libertad, alimentación saludable y
               compromiso ambiental.
             </p>
           </div>
           {/* Dots del carousel */}
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             {heroImages.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setHeroIndex(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${i === heroIndex ? "bg-white scale-110" : "bg-white/40"}`}
+                className={`w-3 h-3 rounded-full transition-all ${i === heroIndex ? "bg-white scale-125" : "bg-white/40"}`}
                 aria-label={`Imagen ${i + 1}`}
               />
             ))}
@@ -244,18 +244,18 @@ export default function Home() {
 
       {/* GALERIA SECTION */}
       <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div style={{ marginBottom: 40, display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d]" style={{ marginBottom: 10, textAlign: "center", width: "100%" }}>Nuestra Producción</h3>
-            <p className="text-base sm:text-lg text-[#4a5568]" style={{ maxWidth: 640, textAlign: "center" }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center" style={{ marginBottom: 40 }}>
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d]" style={{ marginBottom: 10 }}>Nuestra Producción</h3>
+            <p className="text-base sm:text-lg text-[#4a5568] max-w-xl mx-auto">
               Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
             {galleryImages.map((image) => (
-              <div key={image.id} className="group relative aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+              <div key={image.id} className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{image.title}</p>
                 </div>
               </div>
@@ -329,7 +329,7 @@ export default function Home() {
                 name="name"
                 required
                 placeholder="Tu nombre"
-                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
+                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
               />
             </div>
             <div>
@@ -340,7 +340,7 @@ export default function Home() {
                 name="email"
                 required
                 placeholder="tu@correo.com"
-                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
+                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
               />
             </div>
             <div>
