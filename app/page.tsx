@@ -159,7 +159,7 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section id="inicio" className="relative h-dvh sm:h-[85vh] overflow-hidden">
+      <section id="inicio" className="relative h-[calc(100dvh+20px)] sm:h-[90vh] overflow-hidden">
         {heroImages.map((src, i) => (
           <img
             key={src}
@@ -244,16 +244,16 @@ export default function Home() {
 
       {/* GALERIA SECTION */}
       <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center" style={{ marginBottom: 40 }}>
-            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d]" style={{ marginBottom: 10 }}>Nuestra Producción</h3>
-            <p className="text-base sm:text-lg text-[#4a5568] max-w-xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
+            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Nuestra Producción</h3>
+            <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
               Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
             {galleryImages.map((image) => (
-              <div key={image.id} className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+              <div key={image.id} className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{image.title}</p>
