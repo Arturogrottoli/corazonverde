@@ -244,7 +244,7 @@ export default function Home() {
 
       {/* GALERIA SECTION */}
       <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Nuestra Producción</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
