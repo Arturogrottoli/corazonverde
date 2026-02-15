@@ -329,7 +329,7 @@ export default function Home() {
                 name="name"
                 required
                 placeholder="Tu nombre"
-                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
+                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
               />
             </div>
             <div>
@@ -340,7 +340,7 @@ export default function Home() {
                 name="email"
                 required
                 placeholder="tu@correo.com"
-                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
+                className="w-full rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/40 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-white/50 transition"
               />
             </div>
             <div>
