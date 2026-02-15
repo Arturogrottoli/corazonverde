@@ -244,14 +244,14 @@ export default function Home() {
 
       {/* GALERIA SECTION */}
       <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Nuestra Producción</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
               Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
             {galleryImages.map((image) => (
               <div key={image.id} className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -274,7 +274,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14">
+          <div className="grid sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 max-w-5xl mx-auto">
             {recipes.map((recipe) => (
               <a
                 key={recipe.title}
