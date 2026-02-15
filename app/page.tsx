@@ -251,7 +251,7 @@ export default function Home() {
               Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6" style={{ maxWidth: 900, margin: "0 auto" }}>
             {galleryImages.map((image) => (
               <div key={image.id} className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -274,7 +274,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14" style={{ maxWidth: 900, margin: "0 auto" }}>
             {recipes.map((recipe) => (
               <a
                 key={recipe.title}
