@@ -255,38 +255,42 @@ export default function Home() {
             {pilares.map((pilar, i) => {
               const isOpen = openPilar === i
               return (
-                <div
+                <button
                   key={pilar.title}
-                  className={`bg-white/70 backdrop-blur-sm rounded-xl shadow-sm transition-all duration-300 w-full sm:w-[280px] ${
-                    i === 0 ? "sm:self-start" : i === 1 ? "sm:self-center" : "sm:self-end"
-                  }`}
+                  onClick={() => setOpenPilar(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  className={`bg-white/70 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all duration-300 w-full sm:w-[280px] p-8 text-center flex flex-col items-center focus:outline-none border-2 ${
+                    isOpen ? "border-[#4caf50]" : "border-transparent"
+                  } ${i === 0 ? "sm:self-start" : i === 1 ? "sm:self-center" : "sm:self-end"}`}
                 >
-                  <button
-                    className="w-full p-8 text-center flex flex-col items-center gap-0 focus:outline-none"
-                    onClick={() => setOpenPilar(isOpen ? null : i)}
-                    aria-expanded={isOpen}
-                  >
-                    <div className="bg-[#2d7a3d]/10 rounded-full p-4 inline-flex mb-5">
-                      <pilar.icon className="w-7 h-7 text-[#2d7a3d]" />
-                    </div>
-                    <h4 className="text-lg font-bold text-[#2d7a3d] mb-2">{pilar.title}</h4>
-                    <p className="text-[#4a5568] text-sm sm:text-base mb-4">{pilar.description}</p>
-                    <div className="flex items-center gap-1 text-[#4caf50] text-xs font-semibold">
-                      {isOpen ? "Cerrar" : "Ver más"}
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                      />
-                    </div>
-                  </button>
-                  {isOpen && (
-                    <div className="px-8 pb-8 text-center border-t border-[#e8dcc8] pt-5">
-                      <p className="text-[#4a5568] text-sm leading-relaxed">{pilar.detail}</p>
-                    </div>
-                  )}
-                </div>
+                  <div className={`rounded-full p-4 inline-flex mb-5 transition-colors duration-300 ${isOpen ? "bg-[#2d7a3d]/20" : "bg-[#2d7a3d]/10"}`}>
+                    <pilar.icon className="w-7 h-7 text-[#2d7a3d]" />
+                  </div>
+                  <h4 className="text-lg font-bold text-[#2d7a3d] mb-2">{pilar.title}</h4>
+                  <p className="text-[#4a5568] text-sm sm:text-base">{pilar.description}</p>
+                  <div className="mt-4 flex items-center gap-1 text-[#4caf50] text-xs font-semibold">
+                    {isOpen ? "Cerrar" : "Ver más"}
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+                  </div>
+                </button>
               )
             })}
           </div>
+
+          {/* Panel expandido debajo de los 3 pilares */}
+          {openPilar !== null && (
+            <div className="mt-6 bg-white/80 backdrop-blur-sm rounded-xl border border-[#4caf50]/30 px-8 py-6" style={{ maxWidth: 900, margin: "24px auto 0" }}>
+              <div className="flex items-start gap-4">
+                <div className="bg-[#2d7a3d]/10 rounded-full p-3 flex-shrink-0">
+                  {(() => { const Icon = pilares[openPilar].icon; return <Icon className="w-6 h-6 text-[#2d7a3d]" /> })()}
+                </div>
+                <div>
+                  <h5 className="text-[#2d7a3d] font-bold text-base mb-2">{pilares[openPilar].title}</h5>
+                  <p className="text-[#4a5568] text-sm leading-relaxed">{pilares[openPilar].detail}</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
