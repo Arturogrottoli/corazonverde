@@ -354,35 +354,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIOS SECTION */}
-      <section id="testimonios" className="bg-[#e8dcc8]/30" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
-            <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Lo que dicen nuestros clientes</h3>
-            <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
-              La experiencia de quienes ya eligieron Corazón Verde.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8" style={{ maxWidth: 900, margin: "0 auto" }}>
-            {testimonials.map((t) => (
-              <div key={t.name} className="bg-white rounded-xl shadow-sm p-6 flex flex-col gap-4">
-                <div className="text-[#4caf50] text-4xl leading-none font-serif select-none">&ldquo;</div>
-                <p className="text-[#4a5568] text-sm leading-relaxed flex-1">{t.text}</p>
-                <div className="flex items-center gap-3 pt-2 border-t border-[#e8dcc8]">
-                  <div className="w-9 h-9 rounded-full bg-[#2d7a3d]/10 flex items-center justify-center text-[#2d7a3d] font-bold text-sm flex-shrink-0">
-                    {t.name.charAt(0)}
-                  </div>
-                  <span className="text-[#2d7a3d] font-semibold text-sm">{t.name}</span>
-                </div>
-                {/* Audio: próximamente
-                <audio controls src="/testimonios/audio.mp3" className="w-full mt-2" />
-                */}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CONTACTO SECTION */}
       <section id="contacto" className="bg-[#2d7a3d]" style={{ paddingTop: 60, paddingBottom: 60 }}>
         <div style={{ maxWidth: 520, margin: "0 auto", padding: "0 16px", textAlign: "center" }}>

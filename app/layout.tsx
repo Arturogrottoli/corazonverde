@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description: "Crianza natural, sabor real. Pollos de calidad premium de producción artesanal y sustentable.",
   generator: "v0.app",
   icons: {
-    icon: "/brand-logo.jpg",
-    apple: "/brand-logo.jpg",
+    icon: "https://i.ibb.co/0RwMVv7Z/granja-corazon-verde-removebg-preview.png",
+    apple: "https://i.ibb.co/0RwMVv7Z/granja-corazon-verde-removebg-preview.png",
   },
 }
 
