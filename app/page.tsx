@@ -153,7 +153,7 @@ export default function Home() {
             <img
               src={LOGO_URL}
               alt="Corazón Verde Logo"
-              className="h-10 w-10 sm:h-12 sm:w-12 object-contain rounded-full"
+              className="h-8 w-8 sm:h-10 sm:w-10 object-contain"
             />
             <h1 className="text-xl sm:text-2xl font-bold font-serif text-[#2d7a3d] hidden sm:block">Corazón Verde</h1>
           </a>
@@ -198,18 +198,18 @@ export default function Home() {
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === heroIndex ? "opacity-100" : "opacity-0"}`}
           />
         ))}
-        <div className="absolute inset-0 bg-[#1b5e20]/40" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-between px-4 sm:px-6 text-center" style={{ paddingTop: 40, paddingBottom: 40 }}>
+        <div className="absolute inset-0 bg-[#1b5e20]/20" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-between px-4 sm:px-6 text-center" style={{ paddingTop: 32, paddingBottom: 32 }}>
           <div className="flex-1 flex flex-col items-center justify-center">
             <img
               src={LOGO_URL}
               alt="Corazón Verde Logo"
-              className="object-contain rounded-full shadow-lg w-[180px] h-[180px] sm:w-[250px] sm:h-[250px]"
+              className="object-contain w-[130px] h-[130px] sm:w-[180px] sm:h-[180px]"
               style={{ marginBottom: 16 }}
             />
             <div className="flex items-center gap-3" style={{ marginBottom: 12 }}>
               <Leaf className="text-white/80 w-7 h-7 sm:w-10 sm:h-10 flex-shrink-0" />
-              <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold font-serif text-white leading-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-6xl font-bold font-serif text-white leading-tight">
                 Corazón Verde
               </h2>
               <Leaf className="text-white/80 w-7 h-7 sm:w-10 sm:h-10 flex-shrink-0" />
@@ -325,7 +325,7 @@ export default function Home() {
               Descubrí cómo preparar nuestros pollos con estas deliciosas recetas recomendadas.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14" style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8" style={{ maxWidth: 1100, margin: "0 auto" }}>
             {recipes.map((recipe) => (
               <a
                 key={recipe.title}
@@ -344,7 +344,7 @@ export default function Home() {
                 <div className="p-5 sm:p-6">
                   <h4 className="text-lg sm:text-xl font-bold font-serif text-[#2d7a3d] mb-2">{recipe.title}</h4>
                   <p className="text-[#4a5568] text-sm mb-4">{recipe.description}</p>
-                  <div className="flex items-center gap-2 text-[#4caf50] font-semibold text-sm group-hover:gap-3 transition-all">
+                  <div className="flex items-center justify-center gap-2 text-[#4caf50] font-semibold text-sm group-hover:gap-3 transition-all">
                     Ver Receta <ChevronRight size={16} />
                   </div>
                 </div>
@@ -408,7 +408,8 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="bg-[#1b5e20] text-white" style={{ paddingTop: 24, paddingBottom: 24 }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} Corazón Verde. Todos los derechos reservados.</p>
+          <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} Corazón Verde&#174;. Todos los derechos reservados.</p>
+          <p className="text-xs text-white/30 mt-1">Sitio web desarrollado por Arturo Grottoli</p>
         </div>
       </footer>
 
