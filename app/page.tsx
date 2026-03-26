@@ -114,7 +114,7 @@ const heroImages = [
   "/hero-bg-3.svg",
 ]
 
-const LOGO_URL = "https://i.ibb.co/3Y1v7hhF/Whats-App-Image-2026-02-17-at-11-06-57-AM.jpg"
+const LOGO_URL = "https://i.ibb.co/0RwMVv7Z/granja-corazon-verde-removebg-preview.png"
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
