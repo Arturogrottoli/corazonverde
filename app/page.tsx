@@ -49,14 +49,27 @@ const galleryImages: GalleryImage[] = [
 ]
 
 const recipes = [
-  { href: "https://www.youtube.com/watch?v=4vEcK1X6VcA",          image: "https://img.youtube.com/vi/4vEcK1X6VcA/maxresdefault.jpg" },
-  { href: "https://www.youtube.com/watch?v=92uTTzYooss",           image: "https://img.youtube.com/vi/92uTTzYooss/maxresdefault.jpg" },
-  { href: "https://www.youtube.com/watch?v=j8EUJVD5MJ0",           image: "https://img.youtube.com/vi/j8EUJVD5MJ0/maxresdefault.jpg" },
-  { href: "https://www.youtube.com/watch?v=MOtLIQCcMlE",           image: "https://img.youtube.com/vi/MOtLIQCcMlE/maxresdefault.jpg" },
-  { href: "https://www.youtube.com/watch?v=Y5xuRnv-0O8",           image: "https://img.youtube.com/vi/Y5xuRnv-0O8/maxresdefault.jpg" },
-  { href: "https://www.youtube.com/watch?v=Oa8LfxSoOfE",           image: "https://img.youtube.com/vi/Oa8LfxSoOfE/maxresdefault.jpg" },
-  { href: "https://www.youtube.com/shorts/9shivvARBcI",            image: "https://img.youtube.com/vi/9shivvARBcI/maxresdefault.jpg" },
-  { href: "https://www.youtube.com/shorts/HsviVK_tzE8",            image: "https://img.youtube.com/vi/HsviVK_tzE8/maxresdefault.jpg" },
+  { title: "Arroz con Pollo paso a paso",                          href: "https://www.youtube.com/watch?v=4vEcK1X6VcA",   image: "https://img.youtube.com/vi/4vEcK1X6VcA/maxresdefault.jpg" },
+  { title: "5 comidas con 1 pollo para congelar",                  href: "https://www.youtube.com/watch?v=92uTTzYooss",    image: "https://img.youtube.com/vi/92uTTzYooss/maxresdefault.jpg" },
+  { title: "Tortita de papa y pollo",                              href: "https://www.youtube.com/watch?v=j8EUJVD5MJ0",   image: "https://img.youtube.com/vi/j8EUJVD5MJ0/maxresdefault.jpg" },
+  { title: "Pollo de 5 formas diferentes",                         href: "https://www.youtube.com/watch?v=MOtLIQCcMlE",   image: "https://img.youtube.com/vi/MOtLIQCcMlE/maxresdefault.jpg" },
+  { title: "Pollo relleno: una receta increíble",                  href: "https://www.youtube.com/watch?v=Y5xuRnv-0O8",   image: "https://img.youtube.com/vi/Y5xuRnv-0O8/maxresdefault.jpg" },
+  { title: "Las mejores recetas de pollo",                         href: "https://www.youtube.com/watch?v=Oa8LfxSoOfE",   image: "https://img.youtube.com/vi/Oa8LfxSoOfE/maxresdefault.jpg" },
+  { title: "Pollo al yogur con curry en 30 minutos",               href: "https://www.youtube.com/shorts/9shivvARBcI",    image: "https://img.youtube.com/vi/9shivvARBcI/maxresdefault.jpg" },
+  { title: "Pollo marroquí en 30 minutos",                         href: "https://www.youtube.com/shorts/HsviVK_tzE8",    image: "https://img.youtube.com/vi/HsviVK_tzE8/maxresdefault.jpg" },
+  { title: "Pechugas de pollo: 4 recetas geniales",                href: "https://www.youtube.com/watch?v=h-5wyXIbezg",   image: "https://img.youtube.com/vi/h-5wyXIbezg/maxresdefault.jpg" },
+  { title: "Comida para hoy y para la semana en 30 min",           href: "https://www.youtube.com/shorts/t97I1qdvcig",    image: "https://img.youtube.com/vi/t97I1qdvcig/maxresdefault.jpg" },
+  { title: "Albóndigas de pollo con puré",                         href: "https://www.youtube.com/shorts/JTgYwCoLbGk",    image: "https://img.youtube.com/vi/JTgYwCoLbGk/maxresdefault.jpg" },
+  { title: "Masterclass: pollo al horno jugoso",                   href: "https://www.youtube.com/watch?v=QmwVcYQltcA",   image: "https://img.youtube.com/vi/QmwVcYQltcA/maxresdefault.jpg" },
+  { title: "Pollo al ajillo (re fácil)",                           href: "https://www.youtube.com/shorts/UnXuC2vvvqw",    image: "https://img.youtube.com/vi/UnXuC2vvvqw/maxresdefault.jpg" },
+  { title: "Sandwich de pollo desmechado",                         href: "https://www.youtube.com/shorts/PjjXxImp_rc",    image: "https://img.youtube.com/vi/PjjXxImp_rc/maxresdefault.jpg" },
+  { title: "Pollo al limón mejorado",                              href: "https://www.youtube.com/shorts/VWiAk6g5Fh0",    image: "https://img.youtube.com/vi/VWiAk6g5Fh0/maxresdefault.jpg" },
+  { title: "Arroz con pollo fácil",                                href: "https://www.youtube.com/shorts/ZIFDHRswBM4",    image: "https://img.youtube.com/vi/ZIFDHRswBM4/maxresdefault.jpg" },
+  { title: "Pollo con 40 dientes de ajo",                          href: "https://www.youtube.com/shorts/FUDf4CpL6gc",    image: "https://img.youtube.com/vi/FUDf4CpL6gc/maxresdefault.jpg" },
+  { title: "Pollo al ajillo con papas en 20 minutos",              href: "https://www.youtube.com/watch?v=j4SqkX7tvi0",   image: "https://img.youtube.com/vi/j4SqkX7tvi0/maxresdefault.jpg" },
+  { title: "5 recetas con pollo para guardar",                     href: "https://www.youtube.com/watch?v=dJMDZr8vHVs",   image: "https://img.youtube.com/vi/dJMDZr8vHVs/maxresdefault.jpg" },
+  { title: "Pollo relleno que no queda seco",                      href: "https://www.youtube.com/shorts/ilVSAc3s-Gw",    image: "https://img.youtube.com/vi/ilVSAc3s-Gw/maxresdefault.jpg" },
+  { title: "Pollo al disco con papas",                             href: "https://www.youtube.com/watch?v=-lSEUaUdKdE",   image: "https://img.youtube.com/vi/-lSEUaUdKdE/maxresdefault.jpg" },
 ]
 
 const pilares = [
@@ -111,6 +124,7 @@ export default function Home() {
   const [heroIndex, setHeroIndex] = useState(0)
   const [openPilar, setOpenPilar] = useState<number | null>(null)
   const [recipeIndex, setRecipeIndex] = useState(0)
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const recipesPerPage = 3
   const totalPages = Math.ceil(recipes.length / recipesPerPage)
   const visibleRecipes = recipes.slice(recipeIndex * recipesPerPage, recipeIndex * recipesPerPage + recipesPerPage)
@@ -118,7 +132,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setRecipeIndex(i => (i + 1) % totalPages)
-    }, 5000)
+    }, 7000)
     return () => clearInterval(interval)
   }, [totalPages])
   const whatsappNumber = "2396618566"
@@ -135,7 +149,6 @@ export default function Home() {
     { href: "#pilares", label: "Pilares" },
     { href: "#galeria", label: "Galería" },
     { href: "#recetas", label: "Recetas" },
-    { href: "#testimonios", label: "Testimonios" },
     { href: "#contacto", label: "Contacto" },
   ]
 
@@ -260,16 +273,17 @@ export default function Home() {
                   key={pilar.title}
                   onClick={() => setOpenPilar(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className={`bg-white/70 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all duration-300 w-full sm:w-[280px] p-8 text-center flex flex-col items-center focus:outline-none border-2 ${
-                    isOpen ? "border-[#4caf50]" : "border-transparent"
+                  className={`bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 w-full sm:w-[300px] text-center flex flex-col items-center focus:outline-none border-2 ${
+                    isOpen ? "border-[#4caf50] bg-white" : "border-transparent hover:border-[#4caf50]/30"
                   } ${i === 0 ? "sm:self-start" : i === 1 ? "sm:self-center" : "sm:self-end"}`}
+                  style={{ padding: "1.5rem 1.25rem" }}
                 >
-                  <div className={`rounded-full p-4 inline-flex mb-5 transition-colors duration-300 ${isOpen ? "bg-[#2d7a3d]/20" : "bg-[#2d7a3d]/10"}`}>
-                    <pilar.icon className="w-7 h-7 text-[#2d7a3d]" />
+                  <div className={`rounded-2xl p-5 inline-flex mb-6 transition-colors duration-300 ${isOpen ? "bg-[#2d7a3d]/20" : "bg-[#2d7a3d]/10"}`}>
+                    <pilar.icon className="w-8 h-8 text-[#2d7a3d]" />
                   </div>
-                  <h4 className="text-lg font-bold text-[#2d7a3d] mb-2">{pilar.title}</h4>
-                  <p className="text-[#4a5568] text-sm sm:text-base">{pilar.description}</p>
-                  <div className="mt-4 flex items-center gap-1 text-[#4caf50] text-xs font-semibold">
+                  <h4 className="text-lg font-bold text-[#2d7a3d] mb-4 font-serif">{pilar.title}</h4>
+                  <p className="text-[#4a5568] text-sm sm:text-base leading-relaxed">{pilar.description}</p>
+                  <div className="flex items-center gap-1.5 text-[#4caf50] text-sm font-semibold cursor-pointer hover:scale-110 transition-transform duration-200" style={{ marginTop: "1.5rem" }}>
                     {isOpen ? "Cerrar" : "Ver más"}
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
                   </div>
@@ -280,14 +294,15 @@ export default function Home() {
 
           {/* Panel expandido debajo de los 3 pilares */}
           {openPilar !== null && (
-            <div className="mt-6 bg-white/80 backdrop-blur-sm rounded-xl border border-[#4caf50]/30 px-8 py-6" style={{ maxWidth: 900, margin: "24px auto 0" }}>
-              <div className="flex items-start gap-4">
-                <div className="bg-[#2d7a3d]/10 rounded-full p-3 flex-shrink-0">
-                  {(() => { const Icon = pilares[openPilar].icon; return <Icon className="w-6 h-6 text-[#2d7a3d]" /> })()}
+            <div className="bg-gradient-to-br from-white to-[#f0f7f0] rounded-2xl border border-[#4caf50]/30 shadow-md overflow-hidden" style={{ maxWidth: 900, margin: "56px auto 8px" }}>
+              <div className="h-1 w-full bg-gradient-to-r from-[#2d7a3d] to-[#4caf50]" />
+              <div className="flex items-start gap-5 px-8 py-7">
+                <div className="bg-[#2d7a3d]/10 rounded-2xl p-4 flex-shrink-0 border border-[#4caf50]/20">
+                  {(() => { const Icon = pilares[openPilar].icon; return <Icon className="w-7 h-7 text-[#2d7a3d]" /> })()}
                 </div>
                 <div>
-                  <h5 className="text-[#2d7a3d] font-bold text-base mb-2">{pilares[openPilar].title}</h5>
-                  <p className="text-[#4a5568] text-sm leading-relaxed">{pilares[openPilar].detail}</p>
+                  <h5 className="text-[#2d7a3d] font-bold text-lg mb-2 font-serif">{pilares[openPilar].title}</h5>
+                  <p className="text-[#4a5568] text-sm sm:text-base leading-relaxed">{pilares[openPilar].detail}</p>
                 </div>
               </div>
             </div>
@@ -305,15 +320,55 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6" style={{ maxWidth: 900, margin: "0 auto" }}>
-            {galleryImages.map((image) => (
-              <div key={image.id} className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            {galleryImages.map((image, idx) => (
+              <button
+                key={image.id}
+                onClick={() => setLightboxIndex(idx)}
+                className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 focus:outline-none cursor-pointer"
+              >
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="absolute bottom-3 left-3 text-white text-sm font-medium">{image.title}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                  <p className="text-white text-sm font-medium text-left">{image.title}</p>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
+
+          {/* Lightbox */}
+          {lightboxIndex !== null && (
+            <div
+              className="fixed inset-0 z-50 bg-black/92 flex items-center justify-center p-4"
+              onClick={() => setLightboxIndex(null)}
+            >
+              <button
+                className="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors z-10"
+                onClick={() => setLightboxIndex(null)}
+              >
+                <X size={24} />
+              </button>
+              <button
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-colors z-10"
+                onClick={e => { e.stopPropagation(); setLightboxIndex(i => ((i ?? 0) - 1 + galleryImages.length) % galleryImages.length) }}
+              >
+                <ChevronRight size={24} className="rotate-180" />
+              </button>
+              <button
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-colors z-10"
+                onClick={e => { e.stopPropagation(); setLightboxIndex(i => ((i ?? 0) + 1) % galleryImages.length) }}
+              >
+                <ChevronRight size={24} />
+              </button>
+              <div className="max-w-4xl w-full" onClick={e => e.stopPropagation()}>
+                <img
+                  src={galleryImages[lightboxIndex].src}
+                  alt={galleryImages[lightboxIndex].alt}
+                  className="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl"
+                />
+                <p className="text-white/80 text-center mt-4 text-sm font-medium">{galleryImages[lightboxIndex].title}</p>
+                <p className="text-white/40 text-center text-xs mt-1">{lightboxIndex + 1} / {galleryImages.length}</p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -338,7 +393,7 @@ export default function Home() {
                 <div className="relative aspect-video overflow-hidden">
                   <img
                     src={recipe.image}
-                    alt={recipe.title}
+                    alt="Receta de pollo"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
@@ -348,6 +403,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-4 sm:p-5">
+                  <h4 className="text-sm font-semibold font-serif text-[#2d7a3d] mb-3 line-clamp-2 text-center">{recipe.title}</h4>
                   <div className="flex items-center justify-center gap-2 text-[#4caf50] font-semibold text-sm group-hover:gap-3 transition-all">
                     Ver en YouTube <ChevronRight size={16} />
                   </div>
@@ -357,7 +413,7 @@ export default function Home() {
           </div>
 
           {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-4 mt-8">
+            <div className="flex items-center justify-center gap-4" style={{ marginTop: "1.3rem" }}>
               <button
                 onClick={() => setRecipeIndex(i => Math.max(0, i - 1))}
                 disabled={recipeIndex === 0}
@@ -376,7 +432,6 @@ export default function Home() {
             </div>
           )}
         </div>
-        </div>
       </section>
 
       {/* CONTACTO SECTION */}
@@ -392,12 +447,15 @@ export default function Home() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold rounded-2xl px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold rounded-2xl text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ring-4 ring-[#20BA5A]/40"
+            style={{ padding: "1rem 1.75rem" }}
           >
             <span className="w-7 h-7 flex-shrink-0">{whatsappSVG}</span>
-            Escribinos por WhatsApp
+            <span className="flex flex-col items-center">
+              <span>Escribinos por WhatsApp</span>
+              <span className="text-sm font-normal text-white/80">+54 {whatsappNumber}</span>
+            </span>
           </a>
-          <p className="text-white/40 text-sm" style={{ marginTop: 20 }}>+54 {whatsappNumber}</p>
         </div>
       </section>
 
