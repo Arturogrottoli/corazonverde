@@ -49,22 +49,14 @@ const galleryImages: GalleryImage[] = [
 ]
 
 const recipes = [
-  {
-    title: "Receta de Pollo",
-    href: "https://www.youtube.com/watch?v=4vEcK1X6VcA",
-    image: "https://img.youtube.com/vi/4vEcK1X6VcA/maxresdefault.jpg",
-  },
-  {
-    title: "Receta de Pollo",
-    href: "https://www.youtube.com/watch?v=92uTTzYooss",
-    image: "https://img.youtube.com/vi/92uTTzYooss/maxresdefault.jpg",
-  },
-  {
-    title: "Receta de Pollo",
-    href: "https://www.youtube.com/watch?v=92uTTzYooss",
-    image: "https://img.youtube.com/vi/92uTTzYooss/maxresdefault.jpg",
-  },
-  // Agregar más recetas aquí: { title: "...", href: "https://youtube.com/watch?v=...", image: "https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg" }
+  { href: "https://www.youtube.com/watch?v=4vEcK1X6VcA",          image: "https://img.youtube.com/vi/4vEcK1X6VcA/maxresdefault.jpg" },
+  { href: "https://www.youtube.com/watch?v=92uTTzYooss",           image: "https://img.youtube.com/vi/92uTTzYooss/maxresdefault.jpg" },
+  { href: "https://www.youtube.com/watch?v=j8EUJVD5MJ0",           image: "https://img.youtube.com/vi/j8EUJVD5MJ0/maxresdefault.jpg" },
+  { href: "https://www.youtube.com/watch?v=MOtLIQCcMlE",           image: "https://img.youtube.com/vi/MOtLIQCcMlE/maxresdefault.jpg" },
+  { href: "https://www.youtube.com/watch?v=Y5xuRnv-0O8",           image: "https://img.youtube.com/vi/Y5xuRnv-0O8/maxresdefault.jpg" },
+  { href: "https://www.youtube.com/watch?v=Oa8LfxSoOfE",           image: "https://img.youtube.com/vi/Oa8LfxSoOfE/maxresdefault.jpg" },
+  { href: "https://www.youtube.com/shorts/9shivvARBcI",            image: "https://img.youtube.com/vi/9shivvARBcI/maxresdefault.jpg" },
+  { href: "https://www.youtube.com/shorts/HsviVK_tzE8",            image: "https://img.youtube.com/vi/HsviVK_tzE8/maxresdefault.jpg" },
 ]
 
 const pilares = [
@@ -122,6 +114,13 @@ export default function Home() {
   const recipesPerPage = 3
   const totalPages = Math.ceil(recipes.length / recipesPerPage)
   const visibleRecipes = recipes.slice(recipeIndex * recipesPerPage, recipeIndex * recipesPerPage + recipesPerPage)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRecipeIndex(i => (i + 1) % totalPages)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [totalPages])
   const whatsappNumber = "2396618566"
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
@@ -349,7 +348,6 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-4 sm:p-5">
-                  <h4 className="text-base sm:text-lg font-bold font-serif text-[#2d7a3d] mb-3">{recipe.title}</h4>
                   <div className="flex items-center justify-center gap-2 text-[#4caf50] font-semibold text-sm group-hover:gap-3 transition-all">
                     Ver en YouTube <ChevronRight size={16} />
                   </div>
