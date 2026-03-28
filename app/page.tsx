@@ -50,23 +50,21 @@ const galleryImages: GalleryImage[] = [
 
 const recipes = [
   {
-    title: "Pollo al Horno",
-    href: "https://www.paulinacocina.net/pollo-al-horno/",
-    image: "/pollo-con-almendras-receta.jpg",
-    description: "Clásico y siempre rico. Piel crocante, jugoso por dentro, con el sabor único de nuestra crianza artesanal.",
+    title: "Receta de Pollo",
+    href: "https://www.youtube.com/watch?v=4vEcK1X6VcA",
+    image: "https://img.youtube.com/vi/4vEcK1X6VcA/maxresdefault.jpg",
   },
   {
-    title: "Pollo a la Sal",
-    href: "https://www.paulinacocina.net/pollo-a-la-sal/",
-    image: "/picante-de-pollo-receta.jpg",
-    description: "Una técnica ancestral que conserva todos los jugos naturales del pollo. Simple, sano y sorprendente.",
+    title: "Receta de Pollo",
+    href: "https://www.youtube.com/watch?v=92uTTzYooss",
+    image: "https://img.youtube.com/vi/92uTTzYooss/maxresdefault.jpg",
   },
   {
-    title: "Pollo al Limón",
-    href: "https://www.paulinacocina.net/pollo-al-limon/",
-    image: "/pechugas-de-pollo-rellenas-receta.jpg",
-    description: "Con hierbas frescas y limón: liviano, aromático y perfecto para cualquier día de la semana.",
+    title: "Receta de Pollo",
+    href: "https://www.youtube.com/watch?v=92uTTzYooss",
+    image: "https://img.youtube.com/vi/92uTTzYooss/maxresdefault.jpg",
   },
+  // Agregar más recetas aquí: { title: "...", href: "https://youtube.com/watch?v=...", image: "https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg" }
 ]
 
 const pilares = [
@@ -120,6 +118,10 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [heroIndex, setHeroIndex] = useState(0)
   const [openPilar, setOpenPilar] = useState<number | null>(null)
+  const [recipeIndex, setRecipeIndex] = useState(0)
+  const recipesPerPage = 3
+  const totalPages = Math.ceil(recipes.length / recipesPerPage)
+  const visibleRecipes = recipes.slice(recipeIndex * recipesPerPage, recipeIndex * recipesPerPage + recipesPerPage)
   const whatsappNumber = "2396618566"
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
@@ -326,9 +328,9 @@ export default function Home() {
             </p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6 sm:gap-8" style={{ maxWidth: 1100, margin: "0 auto" }}>
-            {recipes.map((recipe) => (
+            {visibleRecipes.map((recipe, i) => (
               <a
-                key={recipe.title}
+                key={recipeIndex * recipesPerPage + i}
                 href={recipe.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -340,17 +342,42 @@ export default function Home() {
                     alt={recipe.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
+                    <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5 text-[#2d7a3d] ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-5 sm:p-6">
-                  <h4 className="text-lg sm:text-xl font-bold font-serif text-[#2d7a3d] mb-2">{recipe.title}</h4>
-                  <p className="text-[#4a5568] text-sm mb-4">{recipe.description}</p>
+                <div className="p-4 sm:p-5">
+                  <h4 className="text-base sm:text-lg font-bold font-serif text-[#2d7a3d] mb-3">{recipe.title}</h4>
                   <div className="flex items-center justify-center gap-2 text-[#4caf50] font-semibold text-sm group-hover:gap-3 transition-all">
-                    Ver Receta <ChevronRight size={16} />
+                    Ver en YouTube <ChevronRight size={16} />
                   </div>
                 </div>
               </a>
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <button
+                onClick={() => setRecipeIndex(i => Math.max(0, i - 1))}
+                disabled={recipeIndex === 0}
+                className="w-10 h-10 rounded-full border-2 border-[#2d7a3d] text-[#2d7a3d] flex items-center justify-center hover:bg-[#2d7a3d] hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              >
+                <ChevronRight size={18} className="rotate-180" />
+              </button>
+              <span className="text-sm text-[#4a5568]">{recipeIndex + 1} / {totalPages}</span>
+              <button
+                onClick={() => setRecipeIndex(i => Math.min(totalPages - 1, i + 1))}
+                disabled={recipeIndex === totalPages - 1}
+                className="w-10 h-10 rounded-full border-2 border-[#2d7a3d] text-[#2d7a3d] flex items-center justify-center hover:bg-[#2d7a3d] hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
+          )}
+        </div>
         </div>
       </section>
 
