@@ -41,10 +41,28 @@ const galleryImages: GalleryImage[] = [
     alt: "Pollo un poco más grande",
   },
   {
-    id: "7",
-    title: "Pollo Listo para Cocinar",
-    src: "https://i.ibb.co/N2m59gC9/IMG-20230114-193401172.jpg",
-    alt: "Pollo pelado y listo para cocinar",
+    id: "8",
+    title: "Instalaciones",
+    src: "https://i.ibb.co/7J7qYMrj/Whats-App-Image-2026-03-31-at-9-06-30-AM-1.jpg",
+    alt: "Instalaciones de granja",
+  },
+  {
+    id: "9",
+    title: "Crianza al Aire Libre",
+    src: "https://i.ibb.co/8LQVjMPC/Whats-App-Image-2026-03-31-at-9-06-30-AM.jpg",
+    alt: "Crianza al aire libre",
+  },
+  {
+    id: "10",
+    title: "Pollos en Campo",
+    src: "https://i.ibb.co/Hj3bKYN/Whats-App-Image-2026-03-31-at-9-06-31-AM.jpg",
+    alt: "Pollos en el campo",
+  },
+  {
+    id: "11",
+    title: "Producción Natural",
+    src: "https://i.ibb.co/355Cx9gR/Whats-App-Image-2026-03-31-at-9-18-39-AM.jpg",
+    alt: "Producción natural",
   },
 ]
 
@@ -203,7 +221,7 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section id="inicio" className="relative h-[calc(100svh-73px)] sm:h-[90vh] overflow-hidden">
+      <section id="inicio" className="relative h-auto sm:h-[90vh] overflow-hidden pb-8 sm:pb-0">
         {heroImages.map((src, i) => (
           <img
             key={src}
@@ -213,12 +231,12 @@ export default function Home() {
           />
         ))}
         <div className="absolute inset-0 bg-[#1b5e20]/20" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-between px-4 sm:px-6 text-center" style={{ paddingTop: 32, paddingBottom: 32 }}>
+        <div className="relative z-10 h-full flex flex-col items-center justify-between px-4 sm:px-6 text-center pt-8 sm:pt-[32px] pb-2 sm:pb-[32px]">
           <div className="flex-1 flex flex-col items-center justify-center">
             <img
               src={LOGO_URL}
               alt="Corazón Verde Logo"
-              className="object-contain w-24 h-24 sm:w-[180px] sm:h-[180px]"
+              className="object-contain w-[130px] h-[130px] sm:w-[180px] sm:h-[180px]"
               style={{ marginBottom: 16 }}
             />
             <div className="flex items-center gap-3" style={{ marginBottom: 12 }}>
@@ -231,7 +249,7 @@ export default function Home() {
             <p className="text-lg sm:text-2xl text-white/90 font-semibold italic" style={{ marginBottom: 12 }}>
               &ldquo;Crianza natural, sabor real&rdquo;
             </p>
-            <p className="text-sm sm:text-lg text-white/75 max-w-2xl leading-relaxed px-2">
+            <p className="text-sm sm:text-lg text-white/75 max-w-2xl leading-relaxed px-2" style={{ marginBottom: 24 }}>
               Producción artesanal de pollos de calidad premium con crianza respetuosa, buenas prácticas de manejo y
               compromiso ambiental.
             </p>
