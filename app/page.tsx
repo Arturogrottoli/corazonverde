@@ -197,7 +197,7 @@ export default function Home() {
             ))}
           </nav>
           <button
-            className="sm:hidden text-[#2d7a3d] p-2 -mr-2"
+            className="sm:hidden text-[#2d7a3d] p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           >
@@ -221,17 +221,19 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section id="inicio" className="relative h-auto sm:h-[90vh] overflow-hidden pb-8 sm:pb-0">
-        {heroImages.map((src, i) => (
-          <img
-            key={src}
-            src={src}
-            alt=""
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === heroIndex ? "opacity-100" : "opacity-0"}`}
-          />
-        ))}
-        <div className="absolute inset-0 bg-[#1b5e20]/20" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-between px-4 sm:px-6 text-center pt-8 sm:pt-[32px] pb-2 sm:pb-[32px]">
+      <section id="inicio" className="relative flex flex-col sm:block h-auto sm:h-[90vh] overflow-hidden bg-[#1b5e20] sm:bg-transparent pb-10 sm:pb-0">
+        <div className="relative w-full h-[45svh] sm:h-full sm:absolute sm:inset-0">
+          {heroImages.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === heroIndex ? "opacity-100" : "opacity-0"}`}
+            />
+          ))}
+          <div className="absolute inset-0 bg-[#1b5e20]/20" />
+        </div>
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-between px-4 sm:px-6 text-center pt-8 sm:pt-[32px] sm:pb-[32px] sm:h-full">
           <div className="flex-1 flex flex-col items-center justify-center">
             <img
               src={LOGO_URL}
@@ -249,12 +251,12 @@ export default function Home() {
             <p className="text-lg sm:text-2xl text-white/90 font-semibold italic" style={{ marginBottom: 12 }}>
               &ldquo;Crianza natural, sabor real&rdquo;
             </p>
-            <p className="text-sm sm:text-lg text-white/75 max-w-2xl leading-relaxed px-2" style={{ marginBottom: 24 }}>
+            <p className="text-sm sm:text-lg text-white/90 max-w-2xl leading-relaxed px-2" style={{ marginBottom: 24 }}>
               Producción artesanal de pollos de calidad premium con crianza respetuosa, buenas prácticas de manejo y
               compromiso ambiental.
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 mt-4 sm:mt-0">
             {heroImages.map((_, i) => (
               <button
                 key={i}
