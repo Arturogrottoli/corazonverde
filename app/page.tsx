@@ -203,7 +203,7 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section id="inicio" className="relative h-[calc(100dvh+20px)] sm:h-[90vh] overflow-hidden">
+      <section id="inicio" className="relative h-[calc(100svh-73px)] sm:h-[90vh] overflow-hidden">
         {heroImages.map((src, i) => (
           <img
             key={src}
@@ -218,7 +218,7 @@ export default function Home() {
             <img
               src={LOGO_URL}
               alt="Corazón Verde Logo"
-              className="object-contain w-[130px] h-[130px] sm:w-[180px] sm:h-[180px]"
+              className="object-contain w-24 h-24 sm:w-[180px] sm:h-[180px]"
               style={{ marginBottom: 16 }}
             />
             <div className="flex items-center gap-3" style={{ marginBottom: 12 }}>
