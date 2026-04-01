@@ -233,12 +233,12 @@ export default function Home() {
           ))}
           <div className="absolute inset-0 bg-[#1b5e20]/20" />
         </div>
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-between px-4 sm:px-6 text-center pt-8 sm:pt-[32px] sm:pb-[32px] sm:h-full">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-between px-4 sm:px-6 text-center pt-4 sm:pt-[32px] sm:pb-[48px] sm:h-full">
           <div className="flex-1 flex flex-col items-center justify-center">
             <img
               src={LOGO_URL}
               alt="Corazón Verde Logo"
-              className="object-contain w-[130px] h-[130px] sm:w-[180px] sm:h-[180px]"
+              className="object-contain w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] -mt-20 sm:mt-0 relative z-20"
               style={{ marginBottom: 16 }}
             />
             <div className="flex items-center gap-3" style={{ marginBottom: 12 }}>
@@ -256,7 +256,7 @@ export default function Home() {
               compromiso ambiental.
             </p>
           </div>
-          <div className="flex gap-3 mt-4 sm:mt-0">
+          <div className="flex gap-3 mt-4 sm:mt-0" style={{ marginBottom: "2rem" }}>
             {heroImages.map((_, i) => (
               <button
                 key={i}
