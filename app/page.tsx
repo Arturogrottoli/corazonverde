@@ -180,7 +180,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#f8f6f1]">
       {/* NAVBAR */}
       <header className="sticky top-0 z-40 bg-[#f8f6f1]/95 backdrop-blur-sm border-b border-[#e8dcc8] shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <a href="#inicio" className="flex items-center gap-3 hover:opacity-80 transition">
             <img
               src={LOGO_URL}
@@ -274,7 +274,7 @@ export default function Home() {
         <div className="absolute bottom-10 left-5 opacity-10 text-[#4caf50] hidden md:block">
           <Trees size={80} />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <div className="flex items-center gap-2" style={{ marginBottom: 10 }}>
               <Sprout className="text-[#4caf50] w-6 h-6" />
@@ -332,7 +332,7 @@ export default function Home() {
 
       {/* GALERIA SECTION */}
       <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Nuestra Producción</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
@@ -394,7 +394,7 @@ export default function Home() {
 
       {/* RECETAS SECTION */}
       <section id="recetas" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Recetas Deliciosas</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
@@ -481,7 +481,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="bg-[#1b5e20] text-white" style={{ paddingTop: 24, paddingBottom: 24 }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} Corazón Verde&#174;. Todos los derechos reservados.</p>
           <p className="text-xs text-white/30 mt-1">Sitio web desarrollado por Arturo Grottoli</p>
         </div>
