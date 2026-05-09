@@ -401,14 +401,14 @@ export default function Home() {
               Descubrí cómo preparar nuestros pollos con estas deliciosas recetas recomendadas.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 w-full max-w-screen-2xl mx-auto">
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
             {visibleRecipes.map((recipe, i) => (
               <a
                 key={recipeIndex * recipesPerPage + i}
                 href={recipe.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:-translate-y-1"
+                className="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:-translate-y-1 w-full sm:w-[320px]"
               >
                 <div className="relative aspect-video overflow-hidden">
                   <img
@@ -456,7 +456,7 @@ export default function Home() {
 
       {/* CONTACTO SECTION */}
       <section id="contacto" className="bg-[#2d7a3d]" style={{ paddingTop: 60, paddingBottom: 60 }}>
-        <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', maxWidth: '800px', margin: '0 auto', textAlign: 'center', padding: '0 16px' }}>
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-white text-center" style={{ marginBottom: 10 }}>Contactanos</h3>
             <p className="text-white/70 text-sm sm:text-base text-center">
