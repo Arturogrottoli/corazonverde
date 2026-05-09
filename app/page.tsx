@@ -285,7 +285,7 @@ export default function Home() {
               Los valores que guían nuestra producción día a día.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
+          <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8">
             {pilares.map((pilar, i) => {
               const isOpen = openPilar === i
               return (

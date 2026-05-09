@@ -142,6 +142,7 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 body {
