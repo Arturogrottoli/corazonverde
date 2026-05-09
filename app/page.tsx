@@ -177,10 +177,10 @@ export default function Home() {
   )
 
   return (
-    <div className="min-h-screen bg-[#f8f6f1]">
+    <div className="min-h-screen bg-[#f8f6f1] w-full overflow-x-hidden flex flex-col">
       {/* NAVBAR */}
       <header className="sticky top-0 z-40 bg-[#f8f6f1]/95 backdrop-blur-sm border-b border-[#e8dcc8] shadow-sm">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <a href="#inicio" className="flex items-center gap-3 hover:opacity-80 transition">
             <img
               src={LOGO_URL}
@@ -274,7 +274,7 @@ export default function Home() {
         <div className="absolute bottom-10 left-5 opacity-10 text-[#4caf50] hidden md:block">
           <Trees size={80} />
         </div>
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <div className="flex items-center gap-2" style={{ marginBottom: 10 }}>
               <Sprout className="text-[#4caf50] w-6 h-6" />
@@ -285,7 +285,7 @@ export default function Home() {
               Los valores que guían nuestra producción día a día.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8">
+          <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8 w-full max-w-screen-xl mx-auto">
             {pilares.map((pilar, i) => {
               const isOpen = openPilar === i
               return (
@@ -293,7 +293,7 @@ export default function Home() {
                   key={pilar.title}
                   onClick={() => setOpenPilar(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className={`bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 w-full sm:w-[300px] text-center flex flex-col items-center focus:outline-none border-2 ${
+                  className={`bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 w-full sm:flex-1 text-center flex flex-col items-center focus:outline-none border-2 ${
                     isOpen ? "border-[#4caf50] bg-white" : "border-transparent hover:border-[#4caf50]/30"
                   } ${i === 0 ? "sm:self-start" : i === 1 ? "sm:self-center" : "sm:self-end"}`}
                   style={{ padding: "1.5rem 1.25rem" }}
@@ -332,14 +332,14 @@ export default function Home() {
 
       {/* GALERIA SECTION */}
       <section id="galeria" className="bg-[#e8dcc8]/30" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Nuestra Producción</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
               Cada etapa de nuestro proceso de crianza natural, desde los pollitos hasta el producto final.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6" style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 sm:gap-6 w-full max-w-screen-2xl mx-auto">
             {galleryImages.map((image, idx) => (
               <button
                 key={image.id}
@@ -394,14 +394,14 @@ export default function Home() {
 
       {/* RECETAS SECTION */}
       <section id="recetas" style={{ paddingTop: 50, paddingBottom: 50 }}>
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-[#2d7a3d] text-center" style={{ marginBottom: 10 }}>Recetas Deliciosas</h3>
             <p className="text-base sm:text-lg text-[#4a5568] max-w-2xl text-center">
               Descubrí cómo preparar nuestros pollos con estas deliciosas recetas recomendadas.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8" style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 w-full max-w-screen-2xl mx-auto">
             {visibleRecipes.map((recipe, i) => (
               <a
                 key={recipeIndex * recipesPerPage + i}
@@ -456,7 +456,7 @@ export default function Home() {
 
       {/* CONTACTO SECTION */}
       <section id="contacto" className="bg-[#2d7a3d]" style={{ paddingTop: 60, paddingBottom: 60 }}>
-        <div style={{ maxWidth: 520, margin: "0 auto", padding: "0 16px", textAlign: "center" }}>
+        <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex flex-col items-center" style={{ marginBottom: 40 }}>
             <h3 className="text-3xl sm:text-4xl font-bold font-serif text-white text-center" style={{ marginBottom: 10 }}>Contactanos</h3>
             <p className="text-white/70 text-sm sm:text-base text-center">
@@ -481,7 +481,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="bg-[#1b5e20] text-white" style={{ paddingTop: 24, paddingBottom: 24 }}>
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} Corazón Verde&#174;. Todos los derechos reservados.</p>
           <p className="text-xs text-white/30 mt-1">Sitio web desarrollado por Arturo Grottoli</p>
         </div>
