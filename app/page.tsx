@@ -467,13 +467,13 @@ export default function Home() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold rounded-2xl text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ring-4 ring-[#20BA5A]/40"
-            style={{ padding: "1rem 1.75rem" }}
+            className="inline-flex items-center gap-4 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold rounded-full text-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ring-4 ring-[#20BA5A]/40"
+            style={{ padding: "1.1rem 2.2rem" }}
           >
-            <span className="w-7 h-7 flex-shrink-0">{whatsappSVG}</span>
-            <span className="flex flex-col items-center">
-              <span>Escribinos por WhatsApp</span>
-              <span className="text-sm font-normal text-white/80">+54 {whatsappNumber}</span>
+            <span className="w-8 h-8 flex-shrink-0">{whatsappSVG}</span>
+            <span className="flex flex-col items-start leading-tight">
+              <span className="text-base font-semibold text-white">Escribinos</span>
+              <span>+54 239 661-8566</span>
             </span>
           </a>
         </div>
