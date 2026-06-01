@@ -67,27 +67,27 @@ const galleryImages: GalleryImage[] = [
 ]
 
 const recipes = [
-  { title: "Arroz con Pollo paso a paso",                          href: "https://www.youtube.com/watch?v=4vEcK1X6VcA",   image: "https://img.youtube.com/vi/4vEcK1X6VcA/maxresdefault.jpg" },
-  { title: "5 comidas con 1 pollo para congelar",                  href: "https://www.youtube.com/watch?v=92uTTzYooss",    image: "https://img.youtube.com/vi/92uTTzYooss/maxresdefault.jpg" },
-  { title: "Tortita de papa y pollo",                              href: "https://www.youtube.com/watch?v=j8EUJVD5MJ0",   image: "https://img.youtube.com/vi/j8EUJVD5MJ0/maxresdefault.jpg" },
-  { title: "Pollo de 5 formas diferentes",                         href: "https://www.youtube.com/watch?v=MOtLIQCcMlE",   image: "https://img.youtube.com/vi/MOtLIQCcMlE/maxresdefault.jpg" },
-  { title: "Pollo relleno: una receta increíble",                  href: "https://www.youtube.com/watch?v=Y5xuRnv-0O8",   image: "https://img.youtube.com/vi/Y5xuRnv-0O8/maxresdefault.jpg" },
-  { title: "Las mejores recetas de pollo",                         href: "https://www.youtube.com/watch?v=Oa8LfxSoOfE",   image: "https://img.youtube.com/vi/Oa8LfxSoOfE/maxresdefault.jpg" },
-  { title: "Pollo al yogur con curry en 30 minutos",               href: "https://www.youtube.com/shorts/9shivvARBcI",    image: "https://img.youtube.com/vi/9shivvARBcI/maxresdefault.jpg" },
-  { title: "Pollo marroquí en 30 minutos",                         href: "https://www.youtube.com/shorts/HsviVK_tzE8",    image: "https://img.youtube.com/vi/HsviVK_tzE8/maxresdefault.jpg" },
-  { title: "Pechugas de pollo: 4 recetas geniales",                href: "https://www.youtube.com/watch?v=h-5wyXIbezg",   image: "https://img.youtube.com/vi/h-5wyXIbezg/maxresdefault.jpg" },
-  { title: "Comida para hoy y para la semana en 30 min",           href: "https://www.youtube.com/shorts/t97I1qdvcig",    image: "https://img.youtube.com/vi/t97I1qdvcig/maxresdefault.jpg" },
-  { title: "Albóndigas de pollo con puré",                         href: "https://www.youtube.com/shorts/JTgYwCoLbGk",    image: "https://img.youtube.com/vi/JTgYwCoLbGk/maxresdefault.jpg" },
-  { title: "Masterclass: pollo al horno jugoso",                   href: "https://www.youtube.com/watch?v=QmwVcYQltcA",   image: "https://img.youtube.com/vi/QmwVcYQltcA/maxresdefault.jpg" },
-  { title: "Pollo al ajillo (re fácil)",                           href: "https://www.youtube.com/shorts/UnXuC2vvvqw",    image: "https://img.youtube.com/vi/UnXuC2vvvqw/maxresdefault.jpg" },
-  { title: "Sandwich de pollo desmechado",                         href: "https://www.youtube.com/shorts/PjjXxImp_rc",    image: "https://img.youtube.com/vi/PjjXxImp_rc/maxresdefault.jpg" },
-  { title: "Pollo al limón mejorado",                              href: "https://www.youtube.com/shorts/VWiAk6g5Fh0",    image: "https://img.youtube.com/vi/VWiAk6g5Fh0/maxresdefault.jpg" },
-  { title: "Arroz con pollo fácil",                                href: "https://www.youtube.com/shorts/ZIFDHRswBM4",    image: "https://img.youtube.com/vi/ZIFDHRswBM4/maxresdefault.jpg" },
-  { title: "Pollo con 40 dientes de ajo",                          href: "https://www.youtube.com/shorts/FUDf4CpL6gc",    image: "https://img.youtube.com/vi/FUDf4CpL6gc/maxresdefault.jpg" },
-  { title: "Pollo al ajillo con papas en 20 minutos",              href: "https://www.youtube.com/watch?v=j4SqkX7tvi0",   image: "https://img.youtube.com/vi/j4SqkX7tvi0/maxresdefault.jpg" },
-  { title: "5 recetas con pollo para guardar",                     href: "https://www.youtube.com/watch?v=dJMDZr8vHVs",   image: "https://img.youtube.com/vi/dJMDZr8vHVs/maxresdefault.jpg" },
-  { title: "Pollo relleno que no queda seco",                      href: "https://www.youtube.com/shorts/ilVSAc3s-Gw",    image: "https://img.youtube.com/vi/ilVSAc3s-Gw/maxresdefault.jpg" },
-  { title: "Pollo al disco con papas",                             href: "https://www.youtube.com/watch?v=-lSEUaUdKdE",   image: "https://img.youtube.com/vi/-lSEUaUdKdE/maxresdefault.jpg" },
+  { title: "Arroz con Pollo paso a paso",                          href: "https://www.youtube.com/watch?v=4vEcK1X6VcA",   image: "https://img.youtube.com/vi/4vEcK1X6VcA/hqdefault.jpg" },
+  { title: "5 comidas con 1 pollo para congelar",                  href: "https://www.youtube.com/watch?v=92uTTzYooss",    image: "https://img.youtube.com/vi/92uTTzYooss/hqdefault.jpg" },
+  { title: "Tortita de papa y pollo",                              href: "https://www.youtube.com/watch?v=j8EUJVD5MJ0",   image: "https://img.youtube.com/vi/j8EUJVD5MJ0/hqdefault.jpg" },
+  { title: "Pollo de 5 formas diferentes",                         href: "https://www.youtube.com/watch?v=MOtLIQCcMlE",   image: "https://img.youtube.com/vi/MOtLIQCcMlE/hqdefault.jpg" },
+  { title: "Pollo relleno: una receta increíble",                  href: "https://www.youtube.com/watch?v=Y5xuRnv-0O8",   image: "https://img.youtube.com/vi/Y5xuRnv-0O8/hqdefault.jpg" },
+  { title: "Las mejores recetas de pollo",                         href: "https://www.youtube.com/watch?v=Oa8LfxSoOfE",   image: "https://img.youtube.com/vi/Oa8LfxSoOfE/hqdefault.jpg" },
+  { title: "Pollo al yogur con curry en 30 minutos",               href: "https://www.youtube.com/shorts/9shivvARBcI",    image: "https://img.youtube.com/vi/9shivvARBcI/hqdefault.jpg" },
+  { title: "Pollo marroquí en 30 minutos",                         href: "https://www.youtube.com/shorts/HsviVK_tzE8",    image: "https://img.youtube.com/vi/HsviVK_tzE8/hqdefault.jpg" },
+  { title: "Pechugas de pollo: 4 recetas geniales",                href: "https://www.youtube.com/watch?v=h-5wyXIbezg",   image: "https://img.youtube.com/vi/h-5wyXIbezg/hqdefault.jpg" },
+  { title: "Comida para hoy y para la semana en 30 min",           href: "https://www.youtube.com/shorts/t97I1qdvcig",    image: "https://img.youtube.com/vi/t97I1qdvcig/hqdefault.jpg" },
+  { title: "Albóndigas de pollo con puré",                         href: "https://www.youtube.com/shorts/JTgYwCoLbGk",    image: "https://img.youtube.com/vi/JTgYwCoLbGk/hqdefault.jpg" },
+  { title: "Masterclass: pollo al horno jugoso",                   href: "https://www.youtube.com/watch?v=QmwVcYQltcA",   image: "https://img.youtube.com/vi/QmwVcYQltcA/hqdefault.jpg" },
+  { title: "Pollo al ajillo (re fácil)",                           href: "https://www.youtube.com/shorts/UnXuC2vvvqw",    image: "https://img.youtube.com/vi/UnXuC2vvvqw/hqdefault.jpg" },
+  { title: "Sandwich de pollo desmechado",                         href: "https://www.youtube.com/shorts/PjjXxImp_rc",    image: "https://img.youtube.com/vi/PjjXxImp_rc/hqdefault.jpg" },
+  { title: "Pollo al limón mejorado",                              href: "https://www.youtube.com/shorts/VWiAk6g5Fh0",    image: "https://img.youtube.com/vi/VWiAk6g5Fh0/hqdefault.jpg" },
+  { title: "Arroz con pollo fácil",                                href: "https://www.youtube.com/shorts/ZIFDHRswBM4",    image: "https://img.youtube.com/vi/ZIFDHRswBM4/hqdefault.jpg" },
+  { title: "Pollo con 40 dientes de ajo",                          href: "https://www.youtube.com/shorts/FUDf4CpL6gc",    image: "https://img.youtube.com/vi/FUDf4CpL6gc/hqdefault.jpg" },
+  { title: "Pollo al ajillo con papas en 20 minutos",              href: "https://www.youtube.com/watch?v=j4SqkX7tvi0",   image: "https://img.youtube.com/vi/j4SqkX7tvi0/hqdefault.jpg" },
+  { title: "5 recetas con pollo para guardar",                     href: "https://www.youtube.com/watch?v=dJMDZr8vHVs",   image: "https://img.youtube.com/vi/dJMDZr8vHVs/hqdefault.jpg" },
+  { title: "Pollo relleno que no queda seco",                      href: "https://www.youtube.com/shorts/ilVSAc3s-Gw",    image: "https://img.youtube.com/vi/ilVSAc3s-Gw/hqdefault.jpg" },
+  { title: "Pollo al disco con papas",                             href: "https://www.youtube.com/watch?v=-lSEUaUdKdE",   image: "https://img.youtube.com/vi/-lSEUaUdKdE/hqdefault.jpg" },
 ]
 
 const pilares = [
@@ -186,6 +186,7 @@ export default function Home() {
               src={LOGO_URL}
               alt="Corazón Verde Logo"
               className="h-8 w-8 sm:h-10 sm:w-10 object-contain"
+              fetchPriority="high"
             />
             <h1 className="text-xl sm:text-2xl font-bold font-serif text-[#2d7a3d] hidden sm:block">Corazón Verde</h1>
           </a>
@@ -228,6 +229,8 @@ export default function Home() {
               key={src}
               src={src}
               alt=""
+              loading={i === 0 ? "eager" : "lazy"}
+              fetchPriority={i === 0 ? "high" : "low"}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === heroIndex ? "opacity-100" : "opacity-0"}`}
             />
           ))}
@@ -240,6 +243,7 @@ export default function Home() {
               alt="Corazón Verde Logo"
               className="object-contain w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] -mt-20 sm:mt-0 relative z-20"
               style={{ marginBottom: 16 }}
+              fetchPriority="high"
             />
             <div className="flex items-center gap-3" style={{ marginBottom: 12 }}>
               <Leaf className="text-white/80 w-7 h-7 sm:w-10 sm:h-10 flex-shrink-0" />
@@ -346,7 +350,7 @@ export default function Home() {
                 onClick={() => setLightboxIndex(idx)}
                 className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 focus:outline-none cursor-pointer"
               >
-                <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={image.src} alt={image.alt} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
                   <p className="text-white text-sm font-medium text-left">{image.title}</p>
                 </div>
@@ -414,6 +418,7 @@ export default function Home() {
                   <img
                     src={recipe.image}
                     alt="Receta de pollo"
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
