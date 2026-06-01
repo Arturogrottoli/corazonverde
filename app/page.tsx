@@ -114,20 +114,7 @@ const pilares = [
   },
 ]
 
-const testimonials = [
-  {
-    name: "María González",
-    text: "El pollo de Corazón Verde tiene un sabor completamente diferente al del supermercado. Se nota que está criado con cuidado y amor.",
-  },
-  {
-    name: "Carlos Rodríguez",
-    text: "Hacemos el pedido todas las semanas. La calidad es constante y el trato siempre muy bueno. Lo recomiendo sin dudarlo.",
-  },
-  {
-    name: "Laura Fernández",
-    text: "Desde que lo probé no puedo volver al pollo común. La diferencia en el sabor y la textura es increíble.",
-  },
-]
+
 
 const heroImages = [
   "/hero-bg-1.svg",
@@ -289,7 +276,7 @@ export default function Home() {
               Los valores que guían nuestra producción día a día.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8 w-full max-w-screen-xl mx-auto">
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
             {pilares.map((pilar, i) => {
               const isOpen = openPilar === i
               return (
@@ -297,9 +284,9 @@ export default function Home() {
                   key={pilar.title}
                   onClick={() => setOpenPilar(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className={`bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 w-full sm:flex-1 text-center flex flex-col items-center focus:outline-none border-2 ${
+                  className={`bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 w-full sm:w-[320px] text-center flex flex-col items-center focus:outline-none border-2 ${
                     isOpen ? "border-[#4caf50] bg-white" : "border-transparent hover:border-[#4caf50]/30"
-                  } ${i === 0 ? "sm:self-start" : i === 1 ? "sm:self-center" : "sm:self-end"}`}
+                  }`}
                   style={{ padding: "1.5rem 1.25rem" }}
                 >
                   <div className={`rounded-2xl p-5 inline-flex mb-6 transition-colors duration-300 ${isOpen ? "bg-[#2d7a3d]/20" : "bg-[#2d7a3d]/10"}`}>
