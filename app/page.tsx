@@ -135,7 +135,7 @@ const heroImages = [
   "/hero-bg-3.svg",
 ]
 
-const LOGO_URL = "https://i.ibb.co/0RwMVv7Z/granja-corazon-verde-removebg-preview.png"
+const LOGO_URL = "/logo.png"
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
