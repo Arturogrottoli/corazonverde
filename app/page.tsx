@@ -61,7 +61,7 @@ const galleryImages: GalleryImage[] = [
   {
     id: "11",
     title: "Producción Natural",
-    src: "https://i.ibb.co/355Cx9gR/Whats-App-Image-2026-03-31-at-9-18-39-AM.jpg",
+    src: "https://i.ibb.co/XZrVr270/d561bdb9-0a35-454b-92ba-cae5edd141d0.png",
     alt: "Producción natural",
   },
 ]
